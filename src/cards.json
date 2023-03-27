@@ -1,0 +1,258 @@
+[
+  {
+    "id": "0",
+    "imageUrl": "https://sun9-19.userapi.com/impg/2PPRq_DqAos6wV6irSDxgUNzSCz-QaMLN2F30w/d9AlL4fl_eU.jpg?size=213x320&quality=95&sign=917a56004a0253a74d9f63bce0b055be&type=album",
+    "name": "ADIDAS",
+    "type": "мл",
+    "size": 250,
+    "barcode": 4604049097549,
+    "producer": "Adidas",
+    "brand": "ADIDAS",
+    "description": "Купить Гель для душа 250 мл Adidas Уход за телом",
+    "price": 48.76,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "1",
+    "imageUrl": "https://sun9-6.userapi.com/impg/uBp5OE11wMzn1Xhgg04oxieZv6YOpF9-lbtxKA/EGpqyR0IDc0.jpg?size=1024x1023&quality=95&sign=95b6231acf0e55d1ab9c46e190a6e259&type=album",
+    "name": "YODOMETICS",
+    "type": "мл",
+    "size": 100,
+    "barcode": 4632042197548,
+    "producer": "Grifon",
+    "brand": "YODOMETICS",
+    "description": "Маска для лица 25+ Персик и каолин Yodometics",
+    "price": 700.21,
+    "typeCare": [
+      "УХОД ЗА ЛИЦОМ"
+    ]
+  },
+  {
+    "id": "2",
+    "imageUrl": "https://sun9-14.userapi.com/impg/kkJXKASrglK_xw5aIvOEACrxYCaErZC03iXXow/5RDwCrOAadU.jpg?size=225x225&quality=95&sign=098d1171c1df31d3d83546d75ad61424&type=album",
+    "name": "ADIDAS",
+    "type": "мл",
+    "size": 250,
+    "barcode": 4604039097545,
+    "producer": "Adidas",
+    "brand": "ADIDAS",
+    "description": "Купить Гель для душа для неё, 250 мл Adidas Уход за телом",
+    "price": 151.3,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "3",
+    "imageUrl": "https://sun9-21.userapi.com/impg/rIjhjzdELrgcOMUKSgbGMi26-tbxMJQkEHv9Mw/88ngILt0LoI.jpg?size=1200x1200&quality=95&sign=0d5f262f9a1ab373fd3ef6bc4e086719&type=album",
+    "name": "BIOMIO",
+    "type": "г",
+    "size": 116,
+    "barcode": 4604034320545,
+    "producer": "Paclan",
+    "brand": "BIOMIO",
+    "description": "Натуральное детское",
+    "price": 61.342,
+    "typeCare": [
+      "УХОД ЗА РУКАМИ",
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "4",
+    "imageUrl": "https://sun9-20.userapi.com/impg/8n6K8d3JvJAIgSyd-nCVSxGRCSHpFrVKj7Ybfg/OdNGC6Cp0s0.jpg?size=500x500&quality=95&sign=4ec9659d286ab407fe186749338c911a&type=album",
+    "name": "NIVEA",
+    "type": "г",
+    "size": 150.8,
+    "barcode": 4604034321145,
+    "producer": "Paclan",
+    "brand": "NIVEA",
+    "description": " крем для лица SENSITIVE PRO для чувствительной кожи",
+    "price": 133,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "5",
+    "imageUrl": "https://sun9-21.userapi.com/impg/umyWvC_iMXT43DArxtH-abMfKGYoc3UWPDlv3w/ATic7_YBMfY.jpg?size=281x191&quality=95&sign=d9107fc7aadf4eb676417f0f9009ca9f&type=album",
+    "name": "BioMio",
+    "type": "г",
+    "size": 15.8,
+    "barcode": 4604014321142,
+    "producer": "GRIFON",
+    "brand": "BioMio",
+    "description": " BIO-SOAP Экологичное туалетное мыло",
+    "price": 50.3,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "6",
+    "imageUrl": "https://sun9-8.userapi.com/impg/Wb_E8vr6OsXfrmewv8FtklcAiHU88L5XQ118Cg/lSQbiQTA46Q.jpg?size=213x320&quality=95&sign=5268500bfd255e552e01f5caad22cf94&type=album",
+    "name": "ADIDAS",
+    "type": "мл",
+    "size": 200.8,
+    "barcode": 5604014369152,
+    "producer": "Adidas",
+    "brand": "ADIDAS",
+    "description": "Купить гели для душа Adidas (Адидас)",
+    "price": 221.3,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "7",
+    "imageUrl": "https://sun9-31.userapi.com/impg/fNjeT-kTo7sPBivI0JNh3rKyr8JXsgW9p5ig4w/1x1YE1NWBgA.jpg?size=620x602&quality=96&sign=2ee03b9669a60e43a5de0bfcb5fd4b46&type=album",
+    "name": "CAMAY",
+    "type": "мл",
+    "size": 899.8,
+    "barcode": 8653014369152,
+    "producer": "GRIFON",
+    "brand": "CAMAY",
+    "description": "Мыло туалетное Camay Мыло туалетное Camay",
+    "price": 521.3,
+    "typeCare": [
+      "УХОД ЗА РУКАМИ"
+    ]
+  },
+  {
+    "id": "8",
+    "imageUrl": "https://sun9-4.userapi.com/impg/AJ039p5jgGvEk_yMZalKebcill9Ydk8GSlpXiQ/grBz91NIEzo.jpg?size=615x599&quality=96&sign=13cd970a0adf0ff42305d58a7c7421ce&type=album",
+    "name": "CAMAY",
+    "type": "мл",
+    "size": 130.8,
+    "barcode": 5608419349152,
+    "producer": "Нэфис",
+    "brand": "CAMAY",
+    "description": "Мыло туалетное CAMAY - купить мыла туалетные",
+    "price": 221.3,
+    "typeCare": [
+      "УХОД ЗА РУКАМИ"
+    ]
+  },
+  {
+    "id": "9",
+    "imageUrl": "https://sun9-7.userapi.com/impg/wSiLGvK0nVOpd16LldkNUpfvOsEKU5bTV8eVQw/wHY_aqWuXcw.jpg?size=486x1024&quality=95&sign=4f4b4386db00b2f15ee0bfa99be5bc85&type=album",
+    "name": "NIVEA",
+    "type": "мл",
+    "size": 750,
+    "barcode": 1104014369152,
+    "producer": "Нэфис",
+    "brand": "NIVEA",
+    "description": "Крем-гель NIVEA Молоко и абрикос",
+    "price": 221.3,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "10",
+    "imageUrl": "https://sun9-56.userapi.com/impg/71Mj93_m8686ajJwjiMcXKDP25VdNIJVcslW_Q/3d8RxsJ_4qw.jpg?size=478x497&quality=96&sign=88b1762feaa1602e5e70dff212bf313c&type=albumCAMAY",
+    "name": "GARNIER",
+    "type": "мл",
+    "size": 599.8,
+    "barcode": 7941014369152,
+    "producer": "Paclan",
+    "brand": "GARNIER",
+    "description": "Шампунь для волос Garnier Fructis Рост Во Всю",
+    "price": 2221.3,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "11",
+    "imageUrl": "https://sun9-57.userapi.com/impg/_3d2msLsVezpNvnWXrtJNgGObhe25wObOHtFuQ/kD2hDaHIAr8.jpg?size=845x845&quality=95&sign=114f13affca64e67e2e8ff11715d34cf&type=album",
+    "name": "NIVEA",
+    "type": "г",
+    "size": 100.8,
+    "barcode": 5604090009151,
+    "producer": "Нэфис",
+    "brand": "NIVEA",
+    "description": "  Крем интенсивный увлажняющий, 100 мл 1 шт",
+    "price": 421.3,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "12",
+    "imageUrl": "https://sun9-47.userapi.com/impg/k2z8bbG-1-j47YKuzGPlnLOQxRwV9MkfuS5H6Q/bJedKNxrTr8.jpg?size=453x604&quality=95&sign=b6f7c2bfb00f21c8443715fe41b10964&type=album",
+    "name": "NIVEA",
+    "type": "г",
+    "size": 56.8,
+    "barcode": 1869451653152,
+    "producer": "Paclan",
+    "brand": "NIVEA",
+    "description": "Део-ролл `NIVEA` ЭФФЕКТ ПУДРЫ Fresh (антиперспирант)",
+    "price": 111.3,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "13",
+    "imageUrl": "https://sun9-65.userapi.com/impg/NiE568UK8YdCodvVKGNICy8EoqdBie8rS5sd5g/4h7Yl1sijkM.jpg?size=845x845&quality=95&sign=bc2776278d80aacfb53d1b04254a8853&type=album",
+    "name": "CAMAY",
+    "type": "мл",
+    "size": 86,
+    "barcode": 5604014369152,
+    "producer": "Нэфис",
+    "brand": "CAMAY",
+    "description": "Мыло твердое `CAMAY` Динамик 85 г купить",
+    "price": 313.3,
+    "typeCare": [
+      "УХОД ЗА РУКАМИ"
+    ]
+  },
+  {
+    "id": "14",
+    "imageUrl": "https://sun9-64.userapi.com/impg/LVKbJ1k4zrKOLwFY-tz_f9oEYP0KHtBk3Obp1g/f5FRsYiEFKE.jpg?size=464x464&quality=95&sign=74f04466895b884cbb5f60190546bb2b&type=album",
+    "name": "GARNIER",
+    "type": "мл",
+    "size": 133.8,
+    "barcode": 5604011111152,
+    "producer": "Нэфис",
+    "brand": "GARNIER",
+    "description": "Жидкое моющее средство AOS Глицерин и Алоэ",
+    "price": 111.3,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  },
+  {
+    "id": "15",
+    "imageUrl": "https://sun9-49.userapi.com/impg/ANbW4gdFMLAVLcCVMH_02hSsDfhEWwrK4laobg/2fkwvA8kn2w.jpg?size=900x1200&quality=95&sign=22b45b259329be39e6d037364033aa7b&type=album",
+    "name": "CAMAY",
+    "type": "г",
+    "size": 132.8,
+    "barcode": 5604014369152,
+    "producer": "GRIFON",
+    "brand": "CAMAY",
+    "description": "Твердое Мыло С Ароматом Французской Розы",
+    "price": 331.3,
+    "typeCare": [
+      "УХОД ЗА РУКАМИ"
+    ]
+  },
+  {
+    "id": "16",
+    "imageUrl": "https://sun9-70.userapi.com/impg/ym_ZKjkTjY03nB42fLBJRKWLnzeL5bXclDRbUw/-p4_4Cwozec.jpg?size=845x845&quality=95&sign=f751529d8cac3e4112d4cb68cc20bc56&type=album",
+    "name": "GARNIER",
+    "type": "мл",
+    "size": 2030.8,
+    "barcode": 5345434369152,
+    "producer": "Нэфис",
+    "brand": "GARNIER",
+    "description": "Шампунь для волос сос восстановление",
+    "price": 2211.3,
+    "typeCare": [
+      "УХОД ЗА ТЕЛОМ"
+    ]
+  }
+]

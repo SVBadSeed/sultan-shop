@@ -1,0 +1,51 @@
+.button-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  width: 200px;
+  height: 60px;
+
+  background: #FFC85E;
+  border-radius: 79px;
+  border: none;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  svg {
+    margin-left: 12px;
+  }
+
+  //&:before {
+  //  position: absolute;
+  //  right: -25px;
+  //  top: 5px;
+  //
+  //  cursor: auto;
+  //  content: '';
+  //  height: 50px;
+  //
+  //  border-left: 1px dashed #000000;
+  //  opacity: 0.1;
+  //}
+  //
+  //&:after {
+  //  position: absolute;
+  //  left: -25px;
+  //  top: 5px;
+  //
+  //  cursor: auto;
+  //  content: '';
+  //  height: 50px;
+  //
+  //  border-left: 1px dashed #000000;
+  //  opacity: 0.1;
+  //}
+}
