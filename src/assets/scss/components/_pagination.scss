@@ -1,0 +1,46 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 50px 0 68px 0;
+
+  li {
+    cursor: pointer;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 36px;
+      height: 36px;
+
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+
+      color: #3F4E65;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .selected {
+    width: 36px;
+    height: 36px;
+
+    background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+    border-radius: 50%;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 35px;
+    }
+  }
+}

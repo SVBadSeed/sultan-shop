@@ -1,23 +1,31 @@
 import React from 'react'
+import {useDispatch, useSelector} from "react-redux"
+import {setCategoryId, setFilterCategories} from "../../redux/filter/FilterSlice"
+import {selectFilter} from "../../redux/filter/selectors"
 
-const FilterCart = () => {
+import '../../assets/scss/components/_categories.scss'
 
+const allCategories = ['Уход за телом', 'Уход за руками', 'Уход за ногами', 'Уход за лицом', 'Уход за волосами',
+    'Средства для загара', 'Подарочные наборы', 'Гигиеническая продукция', 'Гигиена полости рта', 'Бумажная продукция']
+
+
+const Categories = () => {
+    const dispatch = useDispatch()
+    const {categoryId} = useSelector(selectFilter)
+
+    const onChangeCategory = (id: number, event) => {
+        dispatch(setCategoryId(id))
+        dispatch(setFilterCategories(event.target.innerText.toUpperCase()))
+    }
 
     return (
-        <ul className='catalog-top__filter'>
-            <li> Уход <br/> за телом</li>
-            <li> Уход <br/> за руками</li>
-            <li> Уход <br/> за ногами</li>
-            <li> Уход <br/> за лицом</li>
-            <li> Уход <br/> за волосами</li>
-            <li> Средства <br/>для загара</li>
-            <li> Средства <br/> для бритья</li>
-            <li> Подарочные <br/> наборы</li>
-            <li> Гигиеническая <br/> продукция</li>
-            <li> Гигиена <br/> полости рта</li>
-            <li> Бумажная <br/>продукция</li>
+        <ul className='categories'>
+            {allCategories.map((categoryName, i) => (
+                <li className={categoryId === i ? 'active' : ''}
+                    onClick={(event) => onChangeCategory(i, event)} key={i}>{categoryName}</li>
+            ))}
         </ul>
     )
 }
 
-export default FilterCart
+export default Categories

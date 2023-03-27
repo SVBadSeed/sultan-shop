@@ -1,0 +1,32 @@
+.categories {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    width: 100px;
+    height: 70px;
+
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #3F4E65;
+    background: #FFFFFF;
+
+    box-shadow: 0 10px 50px -11px rgba(43, 28, 1, 0.04);
+    border-radius: 10px;
+  }
+
+  .active {
+    background-color: #ffc85e;
+    color: #ffffff;
+  }
+}

@@ -9,7 +9,8 @@
     "producer": "Adidas",
     "brand": "ADIDAS",
     "description": "Купить Гель для душа 250 мл Adidas Уход за телом",
-    "price": 48.76,
+    "price": 48,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -18,13 +19,14 @@
     "id": "1",
     "imageUrl": "https://sun9-6.userapi.com/impg/uBp5OE11wMzn1Xhgg04oxieZv6YOpF9-lbtxKA/EGpqyR0IDc0.jpg?size=1024x1023&quality=95&sign=95b6231acf0e55d1ab9c46e190a6e259&type=album",
     "name": "YODOMETICS",
-    "type": "мл",
+    "type": "г",
     "size": 100,
     "barcode": 4632042197548,
     "producer": "Grifon",
     "brand": "YODOMETICS",
     "description": "Маска для лица 25+ Персик и каолин Yodometics",
-    "price": 700.21,
+    "price": 700,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ЛИЦОМ"
     ]
@@ -39,7 +41,8 @@
     "producer": "Adidas",
     "brand": "ADIDAS",
     "description": "Купить Гель для душа для неё, 250 мл Adidas Уход за телом",
-    "price": 151.3,
+    "price": 151,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -54,9 +57,10 @@
     "producer": "Paclan",
     "brand": "BIOMIO",
     "description": "Натуральное детское",
-    "price": 61.342,
+    "price": 61,
+    "count": 0,
     "typeCare": [
-      "УХОД ЗА РУКАМИ",
+      "УХОД ЗА РУКАМИ, ",
       "УХОД ЗА ТЕЛОМ"
     ]
   },
@@ -67,10 +71,11 @@
     "type": "г",
     "size": 150.8,
     "barcode": 4604034321145,
-    "producer": "Paclan",
+    "producer": "Nivea",
     "brand": "NIVEA",
     "description": " крем для лица SENSITIVE PRO для чувствительной кожи",
     "price": 133,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -82,10 +87,11 @@
     "type": "г",
     "size": 15.8,
     "barcode": 4604014321142,
-    "producer": "GRIFON",
+    "producer": "Grifon",
     "brand": "BioMio",
     "description": " BIO-SOAP Экологичное туалетное мыло",
-    "price": 50.3,
+    "price": 50,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -100,7 +106,8 @@
     "producer": "Adidas",
     "brand": "ADIDAS",
     "description": "Купить гели для душа Adidas (Адидас)",
-    "price": 221.3,
+    "price": 221,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -109,13 +116,14 @@
     "id": "7",
     "imageUrl": "https://sun9-31.userapi.com/impg/fNjeT-kTo7sPBivI0JNh3rKyr8JXsgW9p5ig4w/1x1YE1NWBgA.jpg?size=620x602&quality=96&sign=2ee03b9669a60e43a5de0bfcb5fd4b46&type=album",
     "name": "CAMAY",
-    "type": "мл",
+    "type": "г",
     "size": 899.8,
     "barcode": 8653014369152,
-    "producer": "GRIFON",
+    "producer": "Grifon",
     "brand": "CAMAY",
     "description": "Мыло туалетное Camay Мыло туалетное Camay",
-    "price": 521.3,
+    "price": 521,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА РУКАМИ"
     ]
@@ -124,13 +132,14 @@
     "id": "8",
     "imageUrl": "https://sun9-4.userapi.com/impg/AJ039p5jgGvEk_yMZalKebcill9Ydk8GSlpXiQ/grBz91NIEzo.jpg?size=615x599&quality=96&sign=13cd970a0adf0ff42305d58a7c7421ce&type=album",
     "name": "CAMAY",
-    "type": "мл",
+    "type": "г",
     "size": 130.8,
     "barcode": 5608419349152,
-    "producer": "Нэфис",
+    "producer": "Camay",
     "brand": "CAMAY",
     "description": "Мыло туалетное CAMAY - купить мыла туалетные",
-    "price": 221.3,
+    "price": 221,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА РУКАМИ"
     ]
@@ -139,13 +148,14 @@
     "id": "9",
     "imageUrl": "https://sun9-7.userapi.com/impg/wSiLGvK0nVOpd16LldkNUpfvOsEKU5bTV8eVQw/wHY_aqWuXcw.jpg?size=486x1024&quality=95&sign=4f4b4386db00b2f15ee0bfa99be5bc85&type=album",
     "name": "NIVEA",
-    "type": "мл",
+    "type": "г",
     "size": 750,
     "barcode": 1104014369152,
-    "producer": "Нэфис",
+    "producer": "Nivea",
     "brand": "NIVEA",
     "description": "Крем-гель NIVEA Молоко и абрикос",
-    "price": 221.3,
+    "price": 221,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -160,7 +170,8 @@
     "producer": "Paclan",
     "brand": "GARNIER",
     "description": "Шампунь для волос Garnier Fructis Рост Во Всю",
-    "price": 2221.3,
+    "price": 2221,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -175,7 +186,8 @@
     "producer": "Нэфис",
     "brand": "NIVEA",
     "description": "  Крем интенсивный увлажняющий, 100 мл 1 шт",
-    "price": 421.3,
+    "price": 421,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -190,7 +202,8 @@
     "producer": "Paclan",
     "brand": "NIVEA",
     "description": "Део-ролл `NIVEA` ЭФФЕКТ ПУДРЫ Fresh (антиперспирант)",
-    "price": 111.3,
+    "price": 111,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -199,13 +212,14 @@
     "id": "13",
     "imageUrl": "https://sun9-65.userapi.com/impg/NiE568UK8YdCodvVKGNICy8EoqdBie8rS5sd5g/4h7Yl1sijkM.jpg?size=845x845&quality=95&sign=bc2776278d80aacfb53d1b04254a8853&type=album",
     "name": "CAMAY",
-    "type": "мл",
+    "type": "г",
     "size": 86,
     "barcode": 5604014369152,
-    "producer": "Нэфис",
+    "producer": "Camay",
     "brand": "CAMAY",
     "description": "Мыло твердое `CAMAY` Динамик 85 г купить",
-    "price": 313.3,
+    "price": 313,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА РУКАМИ"
     ]
@@ -220,7 +234,8 @@
     "producer": "Нэфис",
     "brand": "GARNIER",
     "description": "Жидкое моющее средство AOS Глицерин и Алоэ",
-    "price": 111.3,
+    "price": 111,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]
@@ -232,10 +247,11 @@
     "type": "г",
     "size": 132.8,
     "barcode": 5604014369152,
-    "producer": "GRIFON",
+    "producer": "Camay",
     "brand": "CAMAY",
     "description": "Твердое Мыло С Ароматом Французской Розы",
-    "price": 331.3,
+    "price": 331,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА РУКАМИ"
     ]
@@ -247,10 +263,11 @@
     "type": "мл",
     "size": 2030.8,
     "barcode": 5345434369152,
-    "producer": "Нэфис",
+    "producer": "Camay",
     "brand": "GARNIER",
     "description": "Шампунь для волос сос восстановление",
-    "price": 2211.3,
+    "price": 2211,
+    "count": 0,
     "typeCare": [
       "УХОД ЗА ТЕЛОМ"
     ]

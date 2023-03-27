@@ -1,8 +1,10 @@
 import React from 'react'
 
-import '../../assets/scss/components/_cart.scss'
+import '../../assets/scss/components/_card.scss'
+import {Link} from "react-router-dom"
+import ButtonCart from "../../UI/ButtonCart"
 
-type CatalogCartProps = {
+type CatalogCardProps = {
     imageUrl: string,
     name: string,
     type: string,
@@ -12,10 +14,12 @@ type CatalogCartProps = {
     brand: string,
     description: string,
     price: number,
-    typeCare: string[]
-
+    typeCare: string[],
+    id: string,
+    count: number
 }
-const CatalogCart: React.FC<CatalogCartProps> = ({
+const CatalogCard: React.FC<CatalogCardProps> = ({
+                                                     id,
                                                      imageUrl,
                                                      name,
                                                      type,
@@ -25,14 +29,15 @@ const CatalogCart: React.FC<CatalogCartProps> = ({
                                                      brand,
                                                      description,
                                                      price,
-                                                     typeCare
+                                                     typeCare,
+                                                     count
                                                  }) => {
 
     return (
-        <div className='cart'>
-            <img className='cart-image' src={imageUrl} alt='/'/>
-            <div className='cart-content'>
-                <div className='cart-size'> {(type === 'мл') ?
+        <div className='card'>
+            <img className='card-image' src={imageUrl} alt='/'/>
+            <div className='card-content'>
+                <div className='card-size'> {(type === 'мл') ?
                     <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.23" clipPath="url(#clip0_56_1553)">
                             <path
@@ -58,22 +63,43 @@ const CatalogCart: React.FC<CatalogCartProps> = ({
                         </defs>
                     </svg>
                 } {size} {type}</div>
-                <div className='cart-name'>{name} <span className='cart-description'>{description}</span></div>
-                <div className='cart-barcode'>Штрихкод:<span> {barcode}</span></div>
-                <div className='cart-produce'>Производитель: <span> {producer}</span></div>
-                <div className='cart-brand'>Бренд: <span> {brand}</span></div>
-                <div className='cart-type'>Тип ухода: <span>{typeCare}</span></div>
-                <div className='cart-price'>{price} ₸ <button>в корзину <svg width="25" height="18" viewBox="0 0 25 18"
-                                                                             fill="none"
-                                                                             xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M24.448 4.09209C24.2955 3.87908 24.0909 3.77258 23.8341 3.77258H7.48756L7.0439 2.61757C6.93156 2.23889 6.77908 1.91543 6.58649 1.6472C6.39389 1.37897 6.18926 1.18963 5.97259 1.07918C5.75592 0.968728 5.56734 0.893781 5.40684 0.854335C5.24635 0.814889 5.08585 0.795166 4.92536 0.795166H1.62717C1.41852 0.795166 1.24198 0.866169 1.09753 1.00817C0.953083 1.15018 0.880859 1.33163 0.880859 1.55253C0.880859 1.67876 0.912959 1.80104 0.977157 1.91938C1.04136 2.03772 1.13364 2.12844 1.25401 2.19155C1.37438 2.25467 1.49877 2.28622 1.62717 2.28622H4.92536C4.98955 2.28622 5.04974 2.29411 5.10591 2.30989C5.16209 2.32567 5.23832 2.39273 5.33462 2.51107C5.43092 2.62941 5.51117 2.80691 5.57537 3.04359L9.02832 12.5248C9.06042 12.6195 9.11258 12.7102 9.1848 12.797C9.25703 12.8838 9.34129 12.9508 9.43758 12.9982C9.53388 13.0455 9.6382 13.0692 9.75055 13.0692H20.1507C20.3112 13.0692 20.4596 13.0218 20.5961 12.9272C20.7325 12.8325 20.8248 12.7142 20.8729 12.5722L24.5563 4.79029C24.6365 4.53783 24.6004 4.3051 24.448 4.09209ZM19.621 11.5545H10.3524L7.89682 5.2873H22.7266L19.621 11.5545ZM18.2328 13.8905C17.7031 13.8905 17.2497 14.0759 16.8726 14.4467C16.4954 14.8175 16.3068 15.2633 16.3068 15.784C16.3068 16.3047 16.4954 16.7504 16.8726 17.1212C17.2497 17.492 17.7031 17.6774 18.2328 17.6774C18.7624 17.6774 19.2158 17.492 19.593 17.1212C19.9701 16.7504 20.1587 16.3047 20.1587 15.784C20.1587 15.2633 19.9701 14.8175 19.593 14.4467C19.2158 14.0759 18.7624 13.8905 18.2328 13.8905ZM11.2993 13.8905C10.9462 13.8905 10.6212 13.9773 10.3243 14.1509C10.0274 14.3245 9.79469 14.5532 9.62617 14.8373C9.45765 15.1213 9.37339 15.4368 9.37339 15.784C9.37339 16.3047 9.56197 16.7504 9.93913 17.1212C10.3163 17.492 10.7697 17.6774 11.2993 17.6774C11.829 17.6774 12.2824 17.492 12.6595 17.1212C13.0367 16.7504 13.2253 16.3047 13.2253 15.784C13.2253 15.6577 13.2133 15.5315 13.1892 15.4053C13.1651 15.2791 13.129 15.1607 13.0808 15.0503C13.0327 14.9398 12.9725 14.8333 12.9003 14.7308C12.8281 14.6282 12.7478 14.5335 12.6595 14.4467C12.5713 14.36 12.475 14.2811 12.3706 14.2101C12.2663 14.1391 12.158 14.0799 12.0456 14.0326C11.9333 13.9852 11.8129 13.9497 11.6845 13.9261C11.5561 13.9024 11.4277 13.8905 11.2993 13.8905Z"
-                        fill="white"/>
-                </svg>
-                </button></div>
+                <Link to={`/card/${barcode}`}
+                      state={{
+                          imageUrl,
+                          name,
+                          type,
+                          size,
+                          barcode,
+                          producer,
+                          brand,
+                          description,
+                          price,
+                          typeCare,
+                          id,
+                          count
+                      }}
+                      className='card-name'>{name} <span className='card-description'>{description}</span></Link>
+                <div className='card-barcode'>Штрихкод:<span> {barcode}</span></div>
+                <div className='card-produce'>Производитель: <span> {producer}</span></div>
+                <div className='card-brand'>Бренд: <span> {brand}</span></div>
+                <div className='card-type'>Тип ухода: <span>{typeCare}</span></div>
+                <div className='card-price'>{price} ₸
+                    <ButtonCart
+                        name={name}
+                        type={type}
+                        size={size}
+                        brand={brand}
+                        price={price}
+                        barcode={barcode}
+                        imageUrl={imageUrl}
+                        producer={producer}
+                        typeCare={typeCare}
+                        description={description}
+                        id={id}/>
+                </div>
             </div>
         </div>
     )
 }
 
-export default CatalogCart
+export default CatalogCard

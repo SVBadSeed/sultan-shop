@@ -1,4 +1,4 @@
-.cart {
+.card {
   padding: 30px 20px 30px 20px;
 
   background: #FFFFFF;
@@ -43,7 +43,7 @@
 
     color: #111111;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &-description {
@@ -52,7 +52,7 @@
     line-height: 21px;
   }
 
-  &-barcode, &-produce, &-brand, &-type {
+  &-barcode, &-produce, &-brand, &-type, &-articul, &-characters {
     margin-bottom: 5px;
 
     font-weight: 300;
@@ -68,34 +68,5 @@
     justify-content: space-between;
 
     margin-top: 15px;
-
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      cursor: pointer;
-      text-transform: uppercase;
-      width: 145px;
-      height: 45px;
-
-      font-weight: 700;
-      font-size: 10px;
-      line-height: 12px;
-      letter-spacing: 0.15em;
-
-      background: #FFC85E;
-      color: #ffffff;
-      border-radius: 80px;
-      border: none;
-
-      svg {
-        margin-left: 5px;
-      }
-
-      &:active {
-        transform: translateY(3px);
-      }
-    }
   }
 }

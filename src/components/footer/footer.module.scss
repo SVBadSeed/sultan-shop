@@ -1,0 +1,96 @@
+.root {
+  margin-top: auto;
+
+  height: 500px;
+  background: #3F4E65;
+  padding-top: 70px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1370px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    .text {
+      color: #ffffff;
+      margin: 15px 0 45px 0;
+    }
+
+    .mailText {
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+  }
+
+  .footerNav {
+    display: flex;
+    justify-content: space-between;
+
+    .list {
+      margin-left: 80px;
+      color: #ffffff;
+
+      li {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 14px;
+
+        &:first-child {
+          margin-bottom: 25px;
+
+          font-weight: 600;
+          font-size: 20px;
+        }
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+
+      .whatsUp {
+        margin-right: 10px;
+      }
+
+      .bonds {
+        margin-top: 20px;
+      }
+
+      .number {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 14px;
+
+        margin-bottom: 5px;
+      }
+
+      .mail {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .text {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .clock {
+        color: #ffffff;
+        font-weight: 300;
+        font-size: 12px;
+      }
+
+      .call {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 10px;
+
+        text-decoration-line: underline;
+      }
+    }
+  }
+}

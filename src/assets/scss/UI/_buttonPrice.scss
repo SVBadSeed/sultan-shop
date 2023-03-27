@@ -22,30 +22,33 @@
   svg {
     margin-left: 12px;
   }
+}
 
-  //&:before {
-  //  position: absolute;
-  //  right: -25px;
-  //  top: 5px;
-  //
-  //  cursor: auto;
-  //  content: '';
-  //  height: 50px;
-  //
-  //  border-left: 1px dashed #000000;
-  //  opacity: 0.1;
-  //}
-  //
-  //&:after {
-  //  position: absolute;
-  //  left: -25px;
-  //  top: 5px;
-  //
-  //  cursor: auto;
-  //  content: '';
-  //  height: 50px;
-  //
-  //  border-left: 1px dashed #000000;
-  //  opacity: 0.1;
-  //}
+
+.button-price__borders {
+  &:before {
+    position: absolute;
+    right: -25px;
+    top: 5px;
+
+    cursor: auto;
+    content: '';
+    height: 50px;
+
+    border-left: 1px dashed #000000;
+    opacity: 0.1;
+  }
+
+  &:after {
+    position: absolute;
+    left: -25px;
+    top: 5px;
+
+    cursor: auto;
+    content: '';
+    height: 50px;
+
+    border-left: 1px dashed #000000;
+    opacity: 0.1;
+  }
 }

@@ -1,21 +1,29 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import {useDispatch, useSelector} from "react-redux"
+import {selectFilter} from "../redux/filter/selectors"
 
-import '../../assets/scss/components/_catalog.scss'
+import '../assets/scss/components/_catalog.scss'
 
-import Sort from '../sort/Sort'
+import Sort from '../components/sort/Sort'
 
-import carts from '../../carts.json'
-
-import Categories from "../categories/Categories"
-import CatalogParameters from "./CatalogParameters"
-import CatalogCart from "./CatalogCart"
-import Pagination from "../pagination/Pagination"
+import Categories from "../components/categories/Categories"
+import CatalogParameters from "../components/catalog/CatalogParameters"
+import CatalogCard from "../components/catalog/CatalogCard"
+import Pagination from "../components/pagination/Pagination"
+import {initItemsShow, initSort} from "../redux/filter/FilterSlice"
 
 const Catalog = () => {
+    const dispatch = useDispatch()
+    const {itemsShow} = useSelector(selectFilter)
+
+    useEffect(() => {
+        dispatch(initItemsShow())
+        dispatch(initSort())
+    }, [])
+
     return (
         <div className='catalog'>
             <div className='container'>
-                <div className='catalog-nav'>Главная - Косметика и гигиена</div>
                 <div className='catalog-top'>
                     <h1 className='catalog-top__title'>Косметика и гигиена</h1>
                     <Sort/>
@@ -24,8 +32,8 @@ const Catalog = () => {
                 <div className='catalog-content'>
                     <CatalogParameters/>
                     <div className='catalog-content__wrapper'>
-                        <div className='catalog-content__carts'>
-                            {carts.map((cart) => <CatalogCart key={cart.id} {...cart}/>)}
+                        <div className='catalog-content__cards'>
+                            {itemsShow.map((card) => <CatalogCard key={card.id} {...card}/>)}
                         </div>
                         <Pagination/>
                         <div className='catalog-content__description'>Lorem ipsum dolor sit amet, consectetur adipiscing

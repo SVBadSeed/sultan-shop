@@ -1,0 +1,45 @@
+.input-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 13px 0 13px 20px;
+
+
+  width: 260px;
+  height: 60px;
+
+  background: #EDEDED;
+  border-radius: 36px;
+
+  input {
+    border: none;
+    background: transparent;
+
+    height: 50px;
+    width: 180px;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    margin-right: 10px;
+    background: #FFC85E;
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    border: none;
+  }
+}
+
+.input-search__filter {
+  width: 220px;
+
+  input {
+    width: 140px;
+  }
+}
