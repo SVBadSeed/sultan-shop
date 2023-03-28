@@ -7,15 +7,17 @@ import Catalog from "./pages/Catalog"
 import MainLayout from "./layout/MainLayout"
 import Cart from "./pages/Cart"
 import CardProduct from "./components/cardProduct/CardProduct"
+import AdminPanel from "./components/adminPanel/AdminPanel"
 
 function App() {
     return (
         <div className='app'>
             <Routes>
-                <Route path='/' element={<MainLayout/>}>
+                <Route path='' element={<MainLayout/>}>
                     <Route path='' element={<Catalog/>}/>
                     <Route path='card/:barcode' element={<CardProduct/>}/>
                     <Route path='cart' element={<Cart/>}/>
+                    <Route path='adminPanel' element={<AdminPanel/>}/>
                 </Route>
             </Routes>
         </div>

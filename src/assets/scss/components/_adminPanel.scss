@@ -1,0 +1,92 @@
+.admin-panel {
+
+  .container {
+    text-align: center;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1370px;
+    border: 1px solid #111111;
+    border-bottom: none;
+    border-right: none;
+    margin-top: 10px;
+
+    span {
+      width: 130px;
+
+      border-right: 1px solid #111111;
+    }
+  }
+
+
+  &__item {
+    text-align: center;
+  }
+
+  .admin-panel__desc {
+    width: 190px;
+  }
+
+  .admin-panel__img {
+    border-bottom: none;
+    width: 150px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1370px;
+    border: 1px solid #111111;
+    border-right: none;
+
+    margin-bottom: 10px;
+
+    &-name, &-text, &-size, &-typeCare, &-type, &-barcode, &-price, &-brand, &-image, &-producer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 130px;
+      height: 160px;
+
+      border-right: 1px solid #111111;
+    }
+
+    &-image {
+      width: 150px;
+    }
+
+    &-text {
+      width: 190px;
+    }
+  }
+
+  &__button-add {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  &__button-delete, &__button-edit {
+    width: 100px;
+
+  }
+
+  button {
+    margin: 0 10px 20px 0;
+    height: 50px;
+
+    color: #FFFFFF;
+    background: #111111;
+    border-radius: 30px;
+    border: none;
+
+    cursor: pointer;
+
+    &:active {
+      transform: translateY(3px);
+    }
+  }
+}

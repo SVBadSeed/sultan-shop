@@ -2,7 +2,12 @@ import React from 'react'
 
 import '../../assets/scss/components/_modal.scss'
 
-const Modal = ({visible, setVisible}) => {
+type ModalProps = {
+    visible: boolean,
+    setVisible: any
+}
+
+const Modal: React.FC<ModalProps> = ({visible, setVisible}) => {
 
     return (
         <>

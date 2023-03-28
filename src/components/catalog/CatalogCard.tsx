@@ -3,6 +3,8 @@ import React from 'react'
 import '../../assets/scss/components/_card.scss'
 import {Link} from "react-router-dom"
 import ButtonCart from "../../UI/ButtonCart"
+import {useDispatch} from "react-redux"
+import {getName} from "../../redux/filter/FilterSlice"
 
 type CatalogCardProps = {
     imageUrl: string,
@@ -32,6 +34,9 @@ const CatalogCard: React.FC<CatalogCardProps> = ({
                                                      typeCare,
                                                      count
                                                  }) => {
+    const dispatch = useDispatch()
+
+    const linkHandler = () => dispatch(getName(name))
 
     return (
         <div className='card'>
@@ -77,8 +82,8 @@ const CatalogCard: React.FC<CatalogCardProps> = ({
                           typeCare,
                           id,
                           count
-                      }}
-                      className='card-name'>{name} <span className='card-description'>{description}</span></Link>
+                      }} className='card-name' onClick={linkHandler}>{name} <span
+                    className='card-description'>{description}</span></Link>
                 <div className='card-barcode'>Штрихкод:<span> {barcode}</span></div>
                 <div className='card-produce'>Производитель: <span> {producer}</span></div>
                 <div className='card-brand'>Бренд: <span> {brand}</span></div>

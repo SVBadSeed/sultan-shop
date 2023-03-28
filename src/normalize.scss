@@ -43,7 +43,15 @@ a {
   min-height: 100vh;
 }
 
+.container {
+  max-width: 1370px;
+  margin: 0 auto;
+}
+
 .navigation {
+  display: flex;
+  justify-content: space-between;
+
   max-width: 1370px;
   margin: 45px auto 65px auto;
 
@@ -53,4 +61,7 @@ a {
 
   color: #3F4E65;
 
+  span {
+    color: #3F4E65;
+  }
 }

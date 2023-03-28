@@ -39,12 +39,14 @@ export interface FilterSliceState {
     placeholder: {
         min: number,
         max: number
-    }
+    },
+    name: string,
+    id: string
 }
 
 const initialState: FilterSliceState = {
     items: [...cards],
-    itemsShow: [...cards],
+    itemsShow: [],
     producersFilter: [],
     categoryId: 0,
     currentPage: 1,
@@ -62,6 +64,8 @@ const initialState: FilterSliceState = {
         max: null
     },
     categoryFilter: 'УХОД ЗА ТЕЛОМ',
+    name: '',
+    id: ''
 }
 
 export const filterSlice = createSlice({
@@ -69,9 +73,12 @@ export const filterSlice = createSlice({
     initialState,
     reducers: {
         initItemsShow(state) {
+            state.itemsShow = state.items
             state.itemsShow = state.items.filter((item) => (
                 item.typeCare.includes(state.categoryFilter)
             ))
+        }, initItems(state, action) {
+            state.items = [...action.payload]
         },
         initSort(state) {
             if (state.sortValue.sortProperty === 'title') {
@@ -154,6 +161,23 @@ export const filterSlice = createSlice({
             } else if (state.sortValue.sortProperty === '-price') {
                 state.itemsShow.sort((a, b) => b.price - a.price)
             }
+        },
+        getName(state, action: PayloadAction<string>) {
+            state.name = action.payload
+        },
+        deleteCard(state, action: PayloadAction<string>) {
+            state.items = state.items.filter(item => item.id !== action.payload)
+        },
+        addItem(state, action: PayloadAction<item>) {
+            state.items.push(action.payload)
+
+        },
+        EditItem(state, action: PayloadAction<item>) {
+            const objIndex = state.items.findIndex((obj) => obj.id === state.id)
+            state.items[objIndex] = action.payload
+        },
+        getItemId(state, action: PayloadAction<string>) {
+            state.id = action.payload
         }
     }
 })
@@ -166,9 +190,15 @@ export const {
     setFilterProducers,
     setFilterProducersReverse,
     initItemsShow,
+    initItems,
     setMaxPrice,
     setMinPrice,
     setFilterSort,
     initSort,
+    getName,
+    deleteCard,
+    addItem,
+    EditItem,
+    getItemId
 } = filterSlice.actions
 export default filterSlice.reducer
