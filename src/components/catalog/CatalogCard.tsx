@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../assets/scss/components/_card.scss'
+import '../../scss/components/_card.scss'
 import {Link} from "react-router-dom"
 import ButtonCart from "../../UI/ButtonCart"
 import {useDispatch} from "react-redux"

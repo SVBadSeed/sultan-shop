@@ -1,26 +1,20 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import ReactPaginate from "react-paginate"
 
-import '../../assets/scss/components/_pagination.scss'
+import '../../scss/components/_pagination.scss'
+
 import {useDispatch, useSelector} from "react-redux"
 import {selectFilter} from "../../redux/filter/selectors"
 import {setCurrentPage} from "../../redux/filter/FilterSlice"
 
 const Pagination = () => {
     const dispatch = useDispatch()
-    const {currentPage} = useSelector(selectFilter)
+    const {pageSize} = useSelector(selectFilter)
 
-    let pageCount = 2
-    const pageRangeDisplayed = 15
 
     const onChangePage = (page: number) => {
         dispatch(setCurrentPage(page))
     }
-
-    // useEffect(() => {
-    //     pageCount = Math.floor(itemsShow.length / pageRangeDisplayed)
-    //
-    // }, [pageCount])
 
     return (
         <ReactPaginate
@@ -35,9 +29,8 @@ const Pagination = () => {
                       fill="#FFC85E"/>
             </svg>}
             onPageChange={(event) => onChangePage(event.selected + 1)}
-            pageRangeDisplayed={pageRangeDisplayed}
-            pageCount={pageCount}
-            forcePage={currentPage - 1}/>
+            pageRangeDisplayed={pageSize}
+            pageCount={2}/>
     )
 }
 

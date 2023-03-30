@@ -1,3 +1,5 @@
+@import '../mixins';
+
 .header-bottom {
   border: 2px solid rgba(63, 78, 101, 0.2);
 
@@ -5,9 +7,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    margin: 0 auto;
-    max-width: 1370px;
   }
 
   &__catalog {
@@ -86,7 +85,7 @@
     }
   }
 
-  &__card {
+  &__cart {
     position: relative;
     display: flex;
 
@@ -106,7 +105,6 @@
       width: 22px;
       height: 22px;
 
-
       font-weight: 700;
       font-size: 10px;
       line-height: 17px;
@@ -115,7 +113,6 @@
       background: #FFC85E;
       border: 3px solid #FFFFFF;
       border-radius: 50%;
-
     }
 
     &-basket {
@@ -130,6 +127,52 @@
       font-size: 14px;
 
       color: #111111;
+    }
+  }
+}
+
+@include lg {
+  .header-bottom {
+
+    &__catalog {
+      width: 150px;
+      font-size: 12px;
+    }
+
+    &__bonds {
+      display: none;
+    }
+  }
+}
+
+@include md {
+  .header-bottom {
+    .button-price {
+      display: none;
+    }
+
+    .input-search {
+      display: none;
+    }
+
+    &__catalog {
+      display: none;
+    }
+
+    &__cart {
+      div {
+        display: none;
+      }
+
+      svg {
+        margin: 0;
+      }
+    }
+
+    .burger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

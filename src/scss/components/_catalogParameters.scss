@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .catalog-parameters {
   margin-right: 108px;
 
@@ -106,5 +108,32 @@
 
     color: #ffffff;
     background: #ffc85e;
+  }
+}
+
+@include lg {
+  .catalog {
+    &-parameters {
+      margin-right: 20px;
+
+      &__inputs {
+        input {
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  .catalog {
+    &-parameters {
+      display: none;
+      margin-right: 20px;
+
+      &__filter {
+        display: none;
+      }
+    }
   }
 }

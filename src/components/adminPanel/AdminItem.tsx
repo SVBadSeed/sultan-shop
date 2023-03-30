@@ -3,6 +3,7 @@ import React from 'react'
 import {useDispatch, useSelector} from "react-redux"
 import {deleteCard, getItemId} from "../../redux/filter/FilterSlice"
 import {selectCardById} from "../../redux/filter/selectors"
+import {removeItem} from "../../redux/cart/CartSlice"
 
 type AdminItemProps = {
     imageUrl: string,
@@ -23,9 +24,12 @@ const AdminItem: React.FC<AdminItemProps> = (props) => {
     const dispatch = useDispatch()
     const itemById = useSelector(selectCardById(props.id))
 
+
     const deleteCardHandler = () => {
+
         if (window.confirm('Вы точно хотите удалить карточку товара?')) {
             dispatch(deleteCard(props.id))
+            dispatch(removeItem(props.id))
         }
     }
     const editCardHandler = () => {
@@ -36,29 +40,47 @@ const AdminItem: React.FC<AdminItemProps> = (props) => {
 
     return (
         <div className='admin-panel__item'>
-            <div className='admin-panel__title'>
-                <span className='admin-panel__img'>Картинка</span>
-                <span>Название</span>
-                <span className='admin-panel__desc'>Описание</span>
-                <span>Размер</span>
-                <span>Тип</span>
-                <span>Тип ухода</span>
-                <span>Бренд</span>
-                <span>Производитель</span>
-                <span>Цена</span>
-                <span>Штрихкод</span>
-            </div>
             <div className='admin-panel__content'>
-                <img className='admin-panel__content-image' src={props.imageUrl} alt=""/>
-                <div className='admin-panel__content-name'>{props.name}</div>
-                <div className='admin-panel__content-text'>{props.description}</div>
-                <div className='admin-panel__content-size'>{props.size}</div>
-                <div className='admin-panel__content-type'>{props.type}</div>
-                <div className='admin-panel__content-typeCare'>{props.typeCare}</div>
-                <div className='admin-panel__content-brand'>{props.brand}</div>
-                <div className='admin-panel__content-producer'>{props.producer}</div>
-                <div className='admin-panel__content-price'>{props.price}</div>
-                <div className='admin-panel__content-barcode'>{props.barcode}</div>
+                <div className='admin-panel__content-image'>
+                    <span>Картинка</span>
+                    <img src={props.imageUrl} alt=""/>
+                </div>
+                <div className='admin-panel__content-name'>
+                    <span>Название</span>
+                    <p> {props.name} </p>
+                </div>
+                <div className='admin-panel__content-text'>
+                    <span>Описание</span>
+                    <p> {props.description} </p>
+                </div>
+                <div className='admin-panel__content-size'>
+                    <span>Размер</span>
+                    <p> {props.size} </p>
+                </div>
+                <div className='admin-panel__content-type'>
+                    <span>Тип</span>
+                    <p> {props.type} </p>
+                </div>
+                <div className='admin-panel__content-typeCare'>
+                    <span>Тип ухода</span>
+                    <p> {props.typeCare} </p>
+                </div>
+                <div className='admin-panel__content-brand'>
+                    <span>Бренд</span>
+                    <p> {props.brand} </p>
+                </div>
+                <div className='admin-panel__content-producer'>
+                    <span>Производитель</span>
+                    <p> {props.producer} </p>
+                </div>
+                <div className='admin-panel__content-price'>
+                    <span>Цена</span>
+                    <p>{props.price}</p>
+                </div>
+                <div className='admin-panel__content-barcode'>
+                    <span>Штрихкод</span>
+                    <p>{props.barcode}</p>
+                </div>
             </div>
             <button onClick={deleteCardHandler} className='admin-panel__button-delete'>Удалить карточку</button>
             <button onClick={editCardHandler} className='admin-panel__button-edit'>Редактировать

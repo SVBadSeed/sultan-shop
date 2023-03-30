@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 
-import '../assets/scss/UI/_buttonPrice.scss'
+import '../scss/components/UI/_buttonPrice.scss'
 
 type ButtonPriceProps = {
     children: string,

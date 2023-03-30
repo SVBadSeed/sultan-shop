@@ -1,11 +1,11 @@
 import React, {useEffect, useRef} from 'react'
 
-import '../../assets/scss/components/_sort.scss'
+import '../../scss/components/_sort.scss'
 import {useDispatch, useSelector} from "react-redux"
 import {setFilterSort} from "../../redux/filter/FilterSlice"
 import {selectFilter} from "../../redux/filter/selectors"
 
-const Sort = () => {
+const Sort: React.FC = () => {
     const dispatch = useDispatch()
     const {sortValue} = useSelector(selectFilter)
 

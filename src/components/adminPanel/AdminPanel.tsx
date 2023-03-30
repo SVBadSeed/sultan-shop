@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../assets/scss/components/_adminPanel.scss'
+import '../../scss/components/_adminPanel.scss'
 
 import cards from "../../cards.json"
 

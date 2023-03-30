@@ -1,10 +1,7 @@
+@import "../mixins";
+
 .cart {
   margin-bottom: 100px;
-
-  .container {
-    max-width: 1370px;
-    margin: 0 auto;
-  }
 
   &-title {
     font-weight: 500;
@@ -160,6 +157,30 @@
 
     &__image {
       width: 200px;
+    }
+  }
+}
+
+@include lg {
+  .cart {
+    &-item {
+      &__content {
+        width: 250px;
+      }
+
+      &__name {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      &__image {
+        width: 200px;
+        height: 200px;
+      }
+
+      &__description {
+        font-size: 10px;
+      }
     }
   }
 }

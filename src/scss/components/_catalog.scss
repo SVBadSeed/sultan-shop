@@ -1,10 +1,9 @@
+@import "../mixins";
+
 .catalog {
   margin-top: 45px;
 
   .container {
-    margin: 0 auto;
-    max-width: 1370px;
-
     overflow: hidden;
   }
 
@@ -60,6 +59,64 @@
       line-height: 21px;
 
       color: #3F4E65;
+    }
+  }
+
+}
+
+@include lg {
+  .catalog {
+    &-top {
+      margin-top: 10px;
+
+      &__title {
+        font-size: 30px;
+        line-height: 48px;
+      }
+    }
+
+    &-content__cards {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+  }
+}
+
+@include md {
+  .catalog {
+    margin: 0;
+
+    &-content__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-top {
+      display: block;
+
+      &__title {
+        font-size: 20px;
+      }
+    }
+
+    .categories {
+      display: none;
+
+      li {
+        display: block;
+        justify-content: left;
+        height: 17px;
+        width: 210px;
+
+        text-align: left;
+
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .active {
+        background: transparent;
+        color: #3F4E65;
+      }
     }
   }
 }

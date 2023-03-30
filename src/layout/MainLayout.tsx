@@ -7,6 +7,8 @@ import {selectFilter} from "../redux/filter/selectors"
 
 import Header from "../components/header/Header"
 import Footer from "../components/footer/Footer"
+import MobileFooter from "../components/mobileAdaptive/MobileFooter";
+import BackButton from "../components/mobileAdaptive/BackButton";
 
 const MainLayout = () => {
     const {name} = useSelector(selectFilter)
@@ -42,9 +44,11 @@ const MainLayout = () => {
                     </div>
                     <Link to="adminPanel">Админка</Link>
                 </div>
+                <BackButton/>
                 <Outlet/>
             </div>
             <Footer/>
+            <MobileFooter/>
         </>
     )
 }

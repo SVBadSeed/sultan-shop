@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../assets/scss/components/_cart.scss'
+import '../scss/components/_cart.scss'
 
 import {useDispatch, useSelector} from "react-redux"
 import {selectCart} from "../redux/cart/selectors"

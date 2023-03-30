@@ -4,7 +4,7 @@ import debounce from 'lodash.debounce'
 import {useDispatch, useSelector} from "react-redux"
 import {selectFilter} from "../../redux/filter/selectors"
 
-import '../../assets/scss/components/_catalogParameters.scss'
+import '../../scss/components/_catalogParameters.scss'
 
 import InputSearch from "../../UI/InputSearch"
 import ParametersFilter from "../parametersFilter/ParametersFilter"
@@ -83,8 +83,6 @@ const CatalogParameters: React.FC = () => {
     const priceMaxChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
         updateMaxPrice(event.target.value)
     }
-    const {placeholder} = useSelector(selectFilter)
-
     return (
         <div className='catalog-parameters'>
             <h3>Подбор по параметрам</h3>
@@ -99,9 +97,9 @@ const CatalogParameters: React.FC = () => {
                 </div>
                 <div className='catalog-parameters__inputs'>
                     <input onChange={(event) => priceMinChangeHandler(event)} type='number'
-                           placeholder={placeholder.min} min={0}/> -
+                           placeholder='0' min={0}/> -
                     <input onChange={(event) => priceMaxChangeHandler(event)} type='number'
-                           placeholder={placeholder.max}/>
+                           placeholder='10000'/>
                 </div>
             </div>
             <h4>Производитель</h4>

@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .admin-panel {
 
   .container {
@@ -8,38 +10,35 @@
     display: flex;
     justify-content: space-between;
 
-    width: 1370px;
+    max-width: 1370px;
     border: 1px solid #111111;
     border-bottom: none;
     border-right: none;
     margin-top: 10px;
 
     span {
-      width: 130px;
-
       border-right: 1px solid #111111;
     }
   }
-
 
   &__item {
     text-align: center;
   }
 
   .admin-panel__desc {
-    width: 190px;
+    width: 100px;
   }
 
   .admin-panel__img {
     border-bottom: none;
-    width: 150px;
+    width: 110px;
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
 
-    width: 1370px;
+    max-width: 1370px;
     border: 1px solid #111111;
     border-right: none;
 
@@ -47,25 +46,41 @@
 
     &-name, &-text, &-size, &-typeCare, &-type, &-barcode, &-price, &-brand, &-image, &-producer {
       display: flex;
-      justify-content: center;
       align-items: center;
-      width: 130px;
-      height: 160px;
+      flex-direction: column;
+
+      width: 100%;
+      height: 130px;
+      font-size: 14px;
 
       border-right: 1px solid #111111;
+
+      span {
+        width: 100%;
+        border-bottom: 1px solid #111111;
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+      }
     }
 
-    &-image {
-      width: 150px;
+    img {
+      width: 110px;
+      height: 110px;
     }
 
     &-text {
-      width: 190px;
+      max-width: 2000px;
     }
   }
 
   &__button-add {
-    width: 300px;
+    max-width: 300px;
     margin-bottom: 20px;
   }
 
@@ -87,6 +102,39 @@
 
     &:active {
       transform: translateY(3px);
+    }
+  }
+}
+
+@include md {
+  .admin-panel {
+
+    &__items {
+      overflow: hidden;
+    }
+
+    &__item {
+      overflow: auto;
+    }
+
+    &__content {
+      display: block;
+
+      &-name, &-text, &-size, &-typeCare, &-type, &-barcode, &-price, &-brand, &-image, &-producer {
+
+        border-top: 1px solid #000000;
+        font-size: 11px;
+        height: 100px;
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
     }
   }
 }

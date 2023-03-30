@@ -1,0 +1,25 @@
+@import "variables";
+
+@mixin lg {
+  @media (max-width: map-get($breakpoints, lg)) {
+    @content
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($breakpoints, md)) {
+    @content
+  }
+}
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, sm)) {
+    @content
+  }
+}
+
+@mixin v-sm {
+  @media (max-width: map-get($breakpoints, v-sm)) {
+    @content
+  }
+}

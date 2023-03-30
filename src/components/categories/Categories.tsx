@@ -3,13 +3,12 @@ import {useDispatch, useSelector} from "react-redux"
 import {setCategoryId, setFilterCategories} from "../../redux/filter/FilterSlice"
 import {selectFilter} from "../../redux/filter/selectors"
 
-import '../../assets/scss/components/_categories.scss'
+import '../../scss/components/_categories.scss'
 
 const allCategories = ['Уход за телом', 'Уход за руками', 'Уход за ногами', 'Уход за лицом', 'Уход за волосами',
     'Средства для загара', 'Подарочные наборы', 'Гигиеническая продукция', 'Гигиена полости рта', 'Бумажная продукция']
 
-
-const Categories = () => {
+const Categories: React.FC = () => {
     const dispatch = useDispatch()
     const {categoryId} = useSelector(selectFilter)
 

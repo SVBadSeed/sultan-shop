@@ -1,35 +1,41 @@
-.root {
-  margin-top: auto;
+@import '../mixins';
 
-  height: 500px;
+.footer {
+  margin-top: auto;
   background: #3F4E65;
-  padding-top: 70px;
+  padding: 70px 0 110px 0;
 
   .container {
     display: flex;
     justify-content: space-between;
-
-    max-width: 1370px;
-    margin: 0 auto;
   }
 
-  .logo {
-    .text {
+  &-logo {
+    &__text {
       color: #ffffff;
       margin: 15px 0 45px 0;
     }
 
-    .mailText {
+    &__mail {
       color: #ffffff;
       margin-bottom: 15px;
     }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        margin-right: 10px;
+      }
+    }
   }
 
-  .footerNav {
+  &-nav {
     display: flex;
     justify-content: space-between;
 
-    .list {
+    &__list {
       margin-left: 80px;
       color: #ffffff;
 
@@ -50,15 +56,15 @@
         }
       }
 
-      .whatsUp {
-        margin-right: 10px;
-      }
-
-      .bonds {
+      &__bonds {
         margin-top: 20px;
       }
 
-      .number {
+      &__bonds-whats {
+        margin-right: 10px;
+      }
+
+      &-number {
         color: #ffffff;
         font-weight: 600;
         font-size: 14px;
@@ -66,25 +72,25 @@
         margin-bottom: 5px;
       }
 
-      .mail {
+      &-mail {
         font-weight: 600;
         font-size: 14px;
         line-height: 18px;
       }
 
-      .text {
+      &-text {
         font-weight: 300;
         font-size: 12px;
         line-height: 16px;
       }
 
-      .clock {
+      &-clock {
         color: #ffffff;
         font-weight: 300;
         font-size: 12px;
       }
 
-      .call {
+      &-call {
         color: #ffffff;
         font-weight: 400;
         font-size: 10px;
@@ -92,5 +98,55 @@
         text-decoration-line: underline;
       }
     }
+  }
+}
+
+@include lg {
+  .footer {
+
+    &-logo {
+      &__text {
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
+    }
+
+    &-nav__list {
+      margin-left: 40px;
+
+      li {
+        font-size: 12px;
+
+        &:first-child {
+          font-size: 14px;
+        }
+      }
+
+      &-visa {
+        width: 50px;
+      }
+
+      &-master {
+        width: 50px;
+      }
+    }
+  }
+}
+
+.footer-nav__bonds {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  margin-bottom: 15px;
+
+  svg {
+    margin-right: 5px;
+  }
+}
+
+@include md {
+  .footer {
+    display: none;
   }
 }

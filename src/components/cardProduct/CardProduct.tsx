@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {useLocation} from "react-router-dom"
 
-import '../../assets/scss/components/_cardProduct.scss'
+import '../../scss/components/_cardProduct.scss'
 import {useDispatch, useSelector} from "react-redux"
 import {addItem, CartItemType, itemMinus} from "../../redux/cart/CartSlice"
 import {selectCartItemById} from "../../redux/cart/selectors"

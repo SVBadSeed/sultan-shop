@@ -2,7 +2,7 @@ import React from 'react'
 import {useDispatch, useSelector} from "react-redux"
 import {selectFilter} from "../../redux/filter/selectors"
 
-import '../../assets/scss/components/_catalogParameters.scss'
+import '../../scss/components/_catalogParameters.scss'
 import {setCategoryId, setFilterCategories} from "../../redux/filter/FilterSlice"
 
 const ParametersFilter = () => {

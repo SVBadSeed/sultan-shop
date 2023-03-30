@@ -1,7 +1,7 @@
 import React from 'react'
 import {EditItem} from "../../redux/filter/FilterSlice"
 import {useDispatch, useSelector} from "react-redux"
-import {selectFilter} from "../../redux/filter/selectors"
+import {selectCardById, selectFilter} from "../../redux/filter/selectors"
 
 type AdminModalProps = {
     visibleEdit: boolean,
@@ -11,19 +11,20 @@ type AdminModalProps = {
 const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}) => {
     const dispatch = useDispatch()
     const {id} = useSelector(selectFilter)
+    const itemById = useSelector(selectCardById(id))
 
     const editItem = (event) => {
         const editItem = {
-            imageUrl: event.target[8].value,
-            name: event.target[0].value,
-            type: event.target[3].value,
-            size: +(event.target[4].value),
-            barcode: +(event.target[6].value),
-            producer: event.target[2].value,
-            brand: event.target[7].value,
-            description: event.target[1].value,
-            price: +(event.target[5].value),
-            typeCare: [event.target[9].value, ', ', event.target[10].value],
+            imageUrl: event.target[8].value || itemById.imageUrl,
+            name: event.target[0].value || itemById.name,
+            type: event.target[3].value || itemById.type,
+            size: +(event.target[4].value) || itemById.size,
+            barcode: +(event.target[6].value) || itemById.barcode,
+            producer: event.target[2].value || itemById.producer,
+            brand: event.target[7].value || itemById.brand,
+            description: event.target[1].value || itemById.description,
+            price: +(event.target[5].value) || itemById.price,
+            typeCare: [event.target[9].value, ', ', event.target[10].value] || itemById.typeCare,
             id: id
         }
 

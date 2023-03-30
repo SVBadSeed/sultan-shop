@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../assets/scss/components/_header.scss'
+import '../../scss/components/_header.scss'
 
 import HeaderBottom from "./HeaderBottom"
 

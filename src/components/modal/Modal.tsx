@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../assets/scss/components/_modal.scss'
+import '../../scss/components/_modal.scss'
 
 type ModalProps = {
     visible: boolean,

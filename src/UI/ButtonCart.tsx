@@ -1,10 +1,10 @@
 import React from 'react'
 
-import '../assets/scss/UI/_buttonCart.scss'
+import '../scss/components/UI/_buttonCart.scss'
 
 import {useDispatch, useSelector} from "react-redux"
 import {addItem} from "../redux/cart/CartSlice"
-import {selectCart, selectCartItemById} from "../redux/cart/selectors"
+import { selectCartItemById} from "../redux/cart/selectors"
 
 type ButtonCardProps = {
     imageUrl: string,

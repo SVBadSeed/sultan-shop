@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .header {
   &-top {
     padding: 14px 0 14px 0;
@@ -6,9 +8,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      margin: 0 auto;
-      max-width: 1370px;
     }
 
     &__contacts {
@@ -100,5 +99,40 @@
         }
       }
     }
+  }
+}
+
+@include lg {
+  .header-top {
+
+    &__contacts-email {
+      font-size: 10px;
+      margin: 0;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    &__contacts-address {
+      font-size: 10px;
+      padding-right: 5px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    &__nav {
+      li {
+        padding: 0 15px 0 15px;
+      }
+    }
+  }
+}
+
+@include md {
+  .header-top {
+    display: none;
   }
 }
