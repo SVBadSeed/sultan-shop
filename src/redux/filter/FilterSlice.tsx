@@ -47,7 +47,7 @@ const initialState: FilterSliceState = {
     items: [...cards],
     itemsShow: [],
     producersFilter: [],
-    categoryId: 0,
+    categoryId: null,
     value: '',
     sortValue: {
         title: 'Название(по возр.)',
@@ -72,9 +72,9 @@ export const filterSlice = createSlice({
     reducers: {
         initItemsShow(state) {
             state.itemsShow = state.items
-            state.itemsShow = state.items.filter((item) => (
-                item.typeCare.includes(state.categoryFilter)
-            ))
+            // state.itemsShow = state.items.filter((item) => (
+            //     item.typeCare.includes(state.categoryFilter)
+            // ))
         },
         initItems(state, action) {
             state.items = [...action.payload]
@@ -90,10 +90,14 @@ export const filterSlice = createSlice({
         setCurrentPage(state, action: PayloadAction<number>) {
             state.currentPage = action.payload
 
-            state.firstPage = 15 * (state.currentPage - 1)
-            state.secondPage = 15 * state.currentPage
+            state.firstPage = state.pageSize * (state.currentPage - 1)
+            state.secondPage = state.pageSize * state.currentPage
 
-            state.itemsShow = state.itemsShow.slice(state.firstPage, state.secondPage)
+            state.itemsShow = state.items.slice(state.firstPage, state.secondPage).filter((item) => (
+                state.producersFilter.includes(item.producer) ||
+                item.typeCare.includes(state.categoryFilter) ||
+                item.price <= state.price.max || item.price >= state.price.min
+            ))
         },
         setFilterCategories(state, action: PayloadAction<string>
         ) {
@@ -101,14 +105,21 @@ export const filterSlice = createSlice({
                 title: 'Название(по возр.)',
                 sortProperty: 'title'
             }
+
             state.producersFilter = []
             state.categoryFilter = action.payload
+
+            state.firstPage = state.pageSize * (state.currentPage - 1)
+            state.secondPage = state.pageSize * state.currentPage
 
             state.itemsShow = state.items.filter((item) =>
                 item.typeCare[0] === action.payload || item.typeCare[1] === action.payload || item.typeCare[2] === action.payload)
         },
         setFilterProducers(state, action: PayloadAction<string>) {
             state.producersFilter.push(action.payload)
+
+            state.firstPage = state.pageSize * (state.currentPage - 1)
+            state.secondPage = state.pageSize * state.currentPage
 
             state.itemsShow = state.items.filter((item) => (
                 state.producersFilter.includes(item.producer) &&

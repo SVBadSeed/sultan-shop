@@ -14,6 +14,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
     const itemById = useSelector(selectCardById(id))
 
     const editItem = (event) => {
+        console.log(event.target)
         const editItem = {
             imageUrl: event.target[8].value || itemById.imageUrl,
             name: event.target[0].value || itemById.name,
@@ -24,7 +25,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
             brand: event.target[7].value || itemById.brand,
             description: event.target[1].value || itemById.description,
             price: +(event.target[5].value) || itemById.price,
-            typeCare: [event.target[9].value, ', ', event.target[10].value] || itemById.typeCare,
+            typeCare: [event.target[9].value || event.target[9].value, ', ', event.target[10].value] || itemById.typeCare,
             id: id
         }
 
@@ -50,6 +51,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
                     <label>
                         Производитель товара
                         <select className='modal-producer'>
+                            <option></option>
                             <option>Grifon</option>
                             <option>Boyscout</option>
                             <option>Булгари грин</option>
@@ -63,6 +65,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
                     <label>
                         Тип товара (мл, г)
                         <select className='modal-type'>
+                            <option></option>
                             <option>мл</option>
                             <option>г</option>
                         </select>
@@ -82,6 +85,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
                     <label>
                         Бренд товара
                         <select className='modal-brand'>
+                            <option></option>
                             <option>Grifon</option>
                             <option>Boyscout</option>
                             <option>Булгари грин</option>
@@ -99,6 +103,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
                     <label>
                         Тип ухода товара
                         <select className='modal-typeCare'>
+                            <option></option>
                             <option>УХОД ЗА ТЕЛОМ</option>
                             <option>УХОД ЗА РУКАМИ</option>
                             <option>УХОД ЗА НОГАМИ</option>
@@ -114,6 +119,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
                     <label>
                         Тип ухода товара (можно ввести еще)
                         <select className='modal-typeCare'>
+                            <option></option>
                             <option>УХОД ЗА ТЕЛОМ</option>
                             <option>УХОД ЗА РУКАМИ</option>
                             <option>УХОД ЗА НОГАМИ</option>
