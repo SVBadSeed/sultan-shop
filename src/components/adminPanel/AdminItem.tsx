@@ -24,9 +24,7 @@ const AdminItem: React.FC<AdminItemProps> = (props) => {
     const dispatch = useDispatch()
     const itemById = useSelector(selectCardById(props.id))
 
-
     const deleteCardHandler = () => {
-
         if (window.confirm('Вы точно хотите удалить карточку товара?')) {
             dispatch(deleteCard(props.id))
             dispatch(removeItem(props.id))

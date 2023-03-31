@@ -117,6 +117,11 @@
 
       color: #111111;
     }
+
+    &__container {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &-empty {
@@ -159,6 +164,15 @@
       width: 200px;
     }
   }
+
+  .card-product__price {
+    margin: 0 43px 0 43px;
+    padding: 0 43px 0 43px;
+
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  }
+
 }
 
 @include lg {
@@ -181,6 +195,56 @@
       &__description {
         font-size: 10px;
       }
+
+      &__bin {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .card-product__price {
+      font-size: 24px;
+      margin: 0 23px 0 23px;
+      padding: 0 23px 0 23px;
+    }
+  }
+}
+
+@include md {
+  .cart {
+    &-title {
+      font-size: 20px;
+      margin: 25px 0 20px 0;
+      padding: 0;
+    }
+
+    &-item {
+      flex-direction: column;
+    }
+
+
+    &-empty {
+      &__button {
+        display: none;
+      }
+    }
+  }
+}
+
+@include v-sm {
+  .cart {
+
+    &-empty {
+      &__title {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+
+      &__text {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
     }
   }
 }

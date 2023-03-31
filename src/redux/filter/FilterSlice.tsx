@@ -47,7 +47,7 @@ const initialState: FilterSliceState = {
     items: [...cards],
     itemsShow: [],
     producersFilter: [],
-    categoryId: null,
+    categoryId: 1,
     value: '',
     sortValue: {
         title: 'Название(по возр.)',
@@ -72,12 +72,12 @@ export const filterSlice = createSlice({
     reducers: {
         initItemsShow(state) {
             state.itemsShow = state.items
-            // state.itemsShow = state.items.filter((item) => (
-            //     item.typeCare.includes(state.categoryFilter)
-            // ))
+            state.itemsShow = state.items.filter((item) => (
+                item.typeCare.includes(state.categoryFilter)
+            ))
         },
         initItems(state, action) {
-            state.items = [...action.payload]
+            state.items = action.payload
         },
         initSort(state) {
             if (state.sortValue.sortProperty === 'title') {
@@ -96,11 +96,10 @@ export const filterSlice = createSlice({
             state.itemsShow = state.items.slice(state.firstPage, state.secondPage).filter((item) => (
                 state.producersFilter.includes(item.producer) ||
                 item.typeCare.includes(state.categoryFilter) ||
-                item.price <= state.price.max || item.price >= state.price.min
+                item.price <= state.price.max && item.price >= state.price.min
             ))
         },
-        setFilterCategories(state, action: PayloadAction<string>
-        ) {
+        setFilterCategories(state, action: PayloadAction<string>) {
             state.sortValue = {
                 title: 'Название(по возр.)',
                 sortProperty: 'title'
@@ -112,7 +111,7 @@ export const filterSlice = createSlice({
             state.firstPage = state.pageSize * (state.currentPage - 1)
             state.secondPage = state.pageSize * state.currentPage
 
-            state.itemsShow = state.items.filter((item) =>
+            state.itemsShow = state.items.slice(state.firstPage, state.secondPage).filter((item) =>
                 item.typeCare[0] === action.payload || item.typeCare[1] === action.payload || item.typeCare[2] === action.payload)
         },
         setFilterProducers(state, action: PayloadAction<string>) {
@@ -121,13 +120,13 @@ export const filterSlice = createSlice({
             state.firstPage = state.pageSize * (state.currentPage - 1)
             state.secondPage = state.pageSize * state.currentPage
 
-            state.itemsShow = state.items.filter((item) => (
+            state.itemsShow = state.items.slice(state.firstPage, state.secondPage).filter((item) => (
                 state.producersFilter.includes(item.producer) &&
                 item.typeCare.includes(state.categoryFilter)
             ))
         },
         setFilterProducersReverse(state, action: PayloadAction<string>) {
-            state.producersFilter = state.producersFilter.filter((item) => (
+            state.producersFilter = state.producersFilter.slice(state.firstPage, state.secondPage).filter((item) => (
                 item !== action.payload
             ))
 

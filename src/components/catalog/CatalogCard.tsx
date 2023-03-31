@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../../scss/components/_card.scss'
+
 import {Link} from "react-router-dom"
 import ButtonCart from "../../UI/ButtonCart"
 import {useDispatch} from "react-redux"
@@ -87,7 +88,11 @@ const CatalogCard: React.FC<CatalogCardProps> = ({
                 <div className='card-barcode'>Штрихкод:<span> {barcode}</span></div>
                 <div className='card-produce'>Производитель: <span> {producer}</span></div>
                 <div className='card-brand'>Бренд: <span> {brand}</span></div>
-                <div className='card-type'>Тип ухода: <span>{typeCare}</span></div>
+                <div className='card-type'>Тип ухода:
+                    {typeCare.map((type, i) => (
+                        <span key={i}> {type}{i === typeCare.length - 1 ? '' : ','}</span>
+                    ))}
+                </div>
                 <div className='card-price'>{price} ₸
                     <ButtonCart
                         name={name}

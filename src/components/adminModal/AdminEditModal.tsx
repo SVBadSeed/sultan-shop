@@ -14,7 +14,6 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
     const itemById = useSelector(selectCardById(id))
 
     const editItem = (event) => {
-        console.log(event.target)
         const editItem = {
             imageUrl: event.target[8].value || itemById.imageUrl,
             name: event.target[0].value || itemById.name,
@@ -25,7 +24,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
             brand: event.target[7].value || itemById.brand,
             description: event.target[1].value || itemById.description,
             price: +(event.target[5].value) || itemById.price,
-            typeCare: [event.target[9].value || event.target[9].value, ', ', event.target[10].value] || itemById.typeCare,
+            typeCare: [event.target[10].value, event.target[9].value || itemById.typeCare],
             id: id
         }
 

@@ -21,7 +21,7 @@ const AdminModal: React.FC<AdminModalProps> = ({visible, setVisible}) => {
             brand: event.target[7].value,
             description: event.target[1].value,
             price: +(event.target[5].value),
-            typeCare: [event.target[9].value, ', ', event.target[10].value],
+            typeCare: [event.target[9].value, event.target[10].value],
             id: String(Math.random())
         }
 

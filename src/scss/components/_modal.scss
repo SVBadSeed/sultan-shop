@@ -1,3 +1,5 @@
+@import '../mixins';
+
 .modal {
   display: flex;
   align-items: center;
@@ -62,5 +64,44 @@
     line-height: 24px;
 
     color: #3F4E65;
+  }
+}
+
+@include md {
+  .modal {
+    &-content {
+      width: 400px;
+      height: 300px;
+    }
+
+    &-title {
+      font-size: 30px;
+    }
+
+    &-text {
+      font-size: 14px;
+    }
+  }
+}
+
+@include v-sm {
+  .modal {
+    text-align: center;
+
+    &-content {
+      width: 290px;
+      height: 290px;
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-text {
+      width: 200px;
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }
