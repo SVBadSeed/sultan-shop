@@ -16,14 +16,31 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-
     position: relative;
     width: 735px;
-    height: 424px;
 
     background-color: #FFFFFF;
     border-radius: 8px;
+
+    h2 {
+      text-align: center;
+      margin: 20px 0 20px 0;
+    }
+
+    label {
+      margin-bottom: 10px;
+
+      input {
+        border-radius: 5px;
+        border: 1px solid;
+
+        -moz-appearance: textfield;
+      }
+
+      .modal-image {
+        border: none;
+      }
+    }
   }
 
   &-ok {
@@ -64,6 +81,11 @@
     line-height: 24px;
 
     color: #3F4E65;
+  }
+
+  span {
+    text-align: center;
+    margin-bottom: 15px;
   }
 }
 

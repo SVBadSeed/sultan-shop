@@ -36,7 +36,6 @@ const CatalogCard: React.FC<CatalogCardProps> = ({
                                                      count
                                                  }) => {
     const dispatch = useDispatch()
-
     const linkHandler = () => dispatch(getName(name))
 
     return (

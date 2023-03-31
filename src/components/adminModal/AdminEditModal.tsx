@@ -12,6 +12,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
     const dispatch = useDispatch()
     const {id} = useSelector(selectFilter)
     const itemById = useSelector(selectCardById(id))
+    const selectTypeCare = []
 
     const editItem = (event) => {
         const editItem = {
@@ -24,12 +25,16 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
             brand: event.target[7].value || itemById.brand,
             description: event.target[1].value || itemById.description,
             price: +(event.target[5].value) || itemById.price,
-            typeCare: [event.target[10].value, event.target[9].value || itemById.typeCare],
+            typeCare: selectTypeCare || [itemById.typeCare],
             id: id
         }
 
         setVisibleEdit(false)
         dispatch(EditItem(editItem))
+    }
+
+    const selectChange = (event) => {
+        selectTypeCare.push(event.target.value)
     }
 
     return (
@@ -100,9 +105,8 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
                         <input className='modal-image' type='file'></input>
                     </label>
                     <label>
-                        Тип ухода товара
-                        <select className='modal-typeCare'>
-                            <option></option>
+                        Тип ухода товара (можно выбрать несколько)
+                        <select size={10} onClick={selectChange} multiple className='modal-typeCare'>
                             <option>УХОД ЗА ТЕЛОМ</option>
                             <option>УХОД ЗА РУКАМИ</option>
                             <option>УХОД ЗА НОГАМИ</option>
@@ -115,22 +119,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
                             <option>БУМАЖНАЯ ПРОДУКЦИЯ</option>
                         </select>
                     </label>
-                    <label>
-                        Тип ухода товара (можно ввести еще)
-                        <select className='modal-typeCare'>
-                            <option></option>
-                            <option>УХОД ЗА ТЕЛОМ</option>
-                            <option>УХОД ЗА РУКАМИ</option>
-                            <option>УХОД ЗА НОГАМИ</option>
-                            <option>УХОД ЗА ЛИЦОМ</option>
-                            <option>УХОД ЗА ВОЛОСАМИ</option>
-                            <option>СРЕДСТВА ДЛЯ ЗАГАРА</option>
-                            <option>ПОДАРОЧНЫЕ НАБОРЫ</option>
-                            <option>ГИГИЕНИЧЕСКАЯ ПРОДУКЦИЯ</option>
-                            <option>ГИГИЕНА ПОЛОСТИ РТА</option>
-                            <option>БУМАЖНАЯ ПРОДУКЦИЯ</option>
-                        </select>
-                    </label>
+                    <span> Пометка по типу ухода: кликните один раз по типу ухода если хотите выбрать его</span>
                     <button type='submit'>Редактировать карточку</button>
                 </form>
             </div>}

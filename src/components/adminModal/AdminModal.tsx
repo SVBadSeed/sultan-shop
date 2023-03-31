@@ -9,8 +9,11 @@ type AdminModalProps = {
 
 const AdminModal: React.FC<AdminModalProps> = ({visible, setVisible}) => {
     const dispatch = useDispatch()
+
+    const selectTypeCare = []
     const onSubmitHandler = (event) => {
         event.preventDefault()
+
         const newItem = {
             imageUrl: event.target[8].value,
             name: event.target[0].value,
@@ -21,12 +24,16 @@ const AdminModal: React.FC<AdminModalProps> = ({visible, setVisible}) => {
             brand: event.target[7].value,
             description: event.target[1].value,
             price: +(event.target[5].value),
-            typeCare: [event.target[9].value, event.target[10].value],
+            typeCare: selectTypeCare,
             id: String(Math.random())
         }
 
         setVisible(false)
         dispatch(addItem(newItem))
+    }
+
+    const selectChange = (event) => {
+        selectTypeCare.push(event.target.value)
     }
 
     return (
@@ -91,11 +98,11 @@ const AdminModal: React.FC<AdminModalProps> = ({visible, setVisible}) => {
                     </label>
                     <label>
                         Картинка товара
-                        <input className='modal-image' type='file'></input>
+                        <input accept='.jpg, .png, .gif' className='modal-image' type='file'/>
                     </label>
                     <label>
-                        Тип ухода товара
-                        <select className='modal-typeCare'>
+                        Тип ухода товара (можно выбрать несколько)
+                        <select size={10} onClick={selectChange} multiple className='modal-typeCare'>
                             <option>УХОД ЗА ТЕЛОМ</option>
                             <option>УХОД ЗА РУКАМИ</option>
                             <option>УХОД ЗА НОГАМИ</option>
@@ -108,21 +115,7 @@ const AdminModal: React.FC<AdminModalProps> = ({visible, setVisible}) => {
                             <option>БУМАЖНАЯ ПРОДУКЦИЯ</option>
                         </select>
                     </label>
-                    <label>
-                        Тип ухода товара (можно ввести еще)
-                        <select className='modal-typeCare'>
-                            <option>УХОД ЗА ТЕЛОМ</option>
-                            <option>УХОД ЗА РУКАМИ</option>
-                            <option>УХОД ЗА НОГАМИ</option>
-                            <option>УХОД ЗА ЛИЦОМ</option>
-                            <option>УХОД ЗА ВОЛОСАМИ</option>
-                            <option>СРЕДСТВА ДЛЯ ЗАГАРА</option>
-                            <option>ПОДАРОЧНЫЕ НАБОРЫ</option>
-                            <option>ГИГИЕНИЧЕСКАЯ ПРОДУКЦИЯ</option>
-                            <option>ГИГИЕНА ПОЛОСТИ РТА</option>
-                            <option>БУМАЖНАЯ ПРОДУКЦИЯ</option>
-                        </select>
-                    </label>
+                    <div> Сводка по выбору типов: чтобы выбрать нужные вам типы, просто кликните по ним.</div>
                     <button type='submit'> Создать карточку</button>
                 </form>
             </div>}
