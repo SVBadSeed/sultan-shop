@@ -14,9 +14,21 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
     const itemById = useSelector(selectCardById(id))
     const selectTypeCare = []
 
+    const [imageUrl, setImageUrl] = React.useState()
+    const fileReader = new FileReader()
+
+    fileReader.onloadend = () => {
+        // @ts-ignore
+        setImageUrl(fileReader.result)
+    }
+    const onChange = (event) => {
+        const file = (event.target.files[0])
+        fileReader.readAsDataURL(file)
+    }
+
     const editItem = (event) => {
         const editItem = {
-            imageUrl: event.target[8].value || itemById.imageUrl,
+            imageUrl: imageUrl,
             name: event.target[0].value || itemById.name,
             type: event.target[3].value || itemById.type,
             size: +(event.target[4].value) || itemById.size,
@@ -25,7 +37,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
             brand: event.target[7].value || itemById.brand,
             description: event.target[1].value || itemById.description,
             price: +(event.target[5].value) || itemById.price,
-            typeCare: selectTypeCare || [itemById.typeCare],
+            typeCare: selectTypeCare,
             id: id
         }
 
@@ -102,7 +114,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
                     </label>
                     <label>
                         Картинка товара
-                        <input className='modal-image' type='file'></input>
+                        <input onChange={onChange} className='modal-image' type='file'></input>
                     </label>
                     <label>
                         Тип ухода товара (можно выбрать несколько)

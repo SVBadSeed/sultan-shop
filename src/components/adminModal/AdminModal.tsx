@@ -6,16 +6,28 @@ type AdminModalProps = {
     visible: boolean,
     setVisible: any
 }
-
+const url = '/upload'
 const AdminModal: React.FC<AdminModalProps> = ({visible, setVisible}) => {
     const dispatch = useDispatch()
 
+    const [imageUrl, setImageUrl] = React.useState()
+    const fileReader = new FileReader()
+
+    fileReader.onloadend = () => {
+        // @ts-ignore
+        setImageUrl(fileReader.result)
+    }
+    const onChange = (event) => {
+        const file = (event.target.files[0])
+        fileReader.readAsDataURL(file)
+    }
+
     const selectTypeCare = []
-    const onSubmitHandler = (event) => {
+    const onSubmitHandler = async (event) => {
         event.preventDefault()
 
         const newItem = {
-            imageUrl: event.target[8].value,
+            imageUrl: imageUrl,
             name: event.target[0].value,
             type: event.target[3].value,
             size: +(event.target[4].value),
@@ -98,7 +110,7 @@ const AdminModal: React.FC<AdminModalProps> = ({visible, setVisible}) => {
                     </label>
                     <label>
                         Картинка товара
-                        <input accept='.jpg, .png, .gif' className='modal-image' type='file'/>
+                        <input onChange={onChange} accept='.jpg, .png, .gif' className='modal-image' type='file'/>
                     </label>
                     <label>
                         Тип ухода товара (можно выбрать несколько)
