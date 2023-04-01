@@ -3,8 +3,10 @@ import {useLocation} from "react-router-dom"
 
 import '../../scss/components/_cardProduct.scss'
 import {useDispatch, useSelector} from "react-redux"
-import {addItem, CartItemType, itemMinus} from "../../redux/cart/CartSlice"
+import {addItem, itemMinus} from "../../redux/cart/CartSlice"
 import {selectCartItemById} from "../../redux/cart/selectors"
+
+import {CartItemType} from "../../redux/cart/types"
 
 const CardProduct: React.FC = () => {
     const [visibleDesc, setVisibleDesc] = useState(false)

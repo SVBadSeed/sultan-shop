@@ -1,69 +1,32 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit"
 import cards from "../../cards.json"
-
-export type item = {
-    imageUrl: string,
-    name: string,
-    type: string,
-    size: number,
-    barcode: number,
-    producer: string,
-    brand: string,
-    description: string,
-    price: number,
-    typeCare: string[],
-    id: string
-}
-
-export type sortAction = {
-    title: string,
-    sortProperty: string
-}
-
-export interface FilterSliceState {
-    categoryId: number,
-    currentPage: number,
-    items: item[],
-    itemsShow: item[],
-    value: string,
-    producersFilter: string[],
-    categoryFilter: string,
-    price: {
-        min: number,
-        max: number
-    },
-    sortValue: {
-        title: string,
-        sortProperty: string
-    },
-    name: string,
-    id: string,
-    pageSize: number,
-    firstPage: number,
-    secondPage: number
-}
+import {mainFilter} from "./selectors"
+import {FilterSliceState, item, sortAction} from "./types"
 
 const initialState: FilterSliceState = {
     items: [...cards],
     itemsShow: [],
-    producersFilter: [],
-    categoryId: 1,
+    categoryId: null,
     value: '',
     sortValue: {
         title: 'Название(по возр.)',
         sortProperty: 'title'
     },
-    price: {
-        min: null,
-        max: null
-    },
-    categoryFilter: 'УХОД ЗА ТЕЛОМ',
     name: '',
     id: '',
-    currentPage: 1,
-    firstPage: 0,
-    secondPage: 0,
-    pageSize: 15
+    mainFilter: {
+        categoryFilter: 'УХОД ЗА ТЕЛОМ',
+        producersFilter: [],
+        price: {
+            min: null,
+            max: null
+        },
+        currentPage: 1,
+        firstPage: 0,
+        secondPage: 0,
+        pageSize: 15,
+        pageCount: 2
+    }
 }
 
 export const filterSlice = createSlice({
@@ -72,32 +35,19 @@ export const filterSlice = createSlice({
     reducers: {
         initItemsShow(state) {
             state.itemsShow = state.items
-            state.itemsShow = state.items.filter((item) => (
-                item.typeCare.includes(state.categoryFilter)
-            ))
+            state.itemsShow.sort((a, b) => a.name.localeCompare(b.name))
+            mainFilter(state)
         },
         initItems(state, action) {
-            state.items = action.payload
-        },
-        initSort(state) {
-            if (state.sortValue.sortProperty === 'title') {
-                state.itemsShow.sort((a, b) => a.name.localeCompare(b.name))
-            }
+            state.items = [...action.payload]
         },
         setCategoryId(state, action: PayloadAction<number>) {
             if (state.items) state.categoryId = action.payload
         },
         setCurrentPage(state, action: PayloadAction<number>) {
-            state.currentPage = action.payload
+            state.mainFilter.currentPage = action.payload
 
-            state.firstPage = state.pageSize * (state.currentPage - 1)
-            state.secondPage = state.pageSize * state.currentPage
-
-            state.itemsShow = state.items.slice(state.firstPage, state.secondPage).filter((item) => (
-                state.producersFilter.includes(item.producer) ||
-                item.typeCare.includes(state.categoryFilter) ||
-                item.price <= state.price.max && item.price >= state.price.min
-            ))
+            mainFilter(state)
         },
         setFilterCategories(state, action: PayloadAction<string>) {
             state.sortValue = {
@@ -105,62 +55,30 @@ export const filterSlice = createSlice({
                 sortProperty: 'title'
             }
 
-            state.producersFilter = []
-            state.categoryFilter = action.payload
-
-            state.firstPage = state.pageSize * (state.currentPage - 1)
-            state.secondPage = state.pageSize * state.currentPage
-
-            state.itemsShow = state.items.slice(state.firstPage, state.secondPage).filter((item) =>
-                item.typeCare[0] === action.payload || item.typeCare[1] === action.payload || item.typeCare[2] === action.payload)
+            state.mainFilter.producersFilter = []
+            state.mainFilter.categoryFilter = action.payload
+            mainFilter(state)
         },
         setFilterProducers(state, action: PayloadAction<string>) {
-            state.producersFilter.push(action.payload)
-
-            state.firstPage = state.pageSize * (state.currentPage - 1)
-            state.secondPage = state.pageSize * state.currentPage
-
-            state.itemsShow = state.items.slice(state.firstPage, state.secondPage).filter((item) => (
-                state.producersFilter.includes(item.producer) &&
-                item.typeCare.includes(state.categoryFilter)
-            ))
+            state.mainFilter.producersFilter.push(action.payload)
+            mainFilter(state)
         },
         setFilterProducersReverse(state, action: PayloadAction<string>) {
-            state.producersFilter = state.producersFilter.slice(state.firstPage, state.secondPage).filter((item) => (
+            state.mainFilter.producersFilter = state.mainFilter.producersFilter.filter((item) => (
                 item !== action.payload
             ))
-
-            state.itemsShow = state.items.filter((item) => (
-                (state.producersFilter.length > 0) ?
-                    state.producersFilter.includes(item.producer) &&
-                    item.typeCare.includes(state.categoryFilter) :
-                    item.typeCare.includes(state.categoryFilter)
-            ))
+            mainFilter(state)
         },
         setSearchProducers(state, action: PayloadAction<string>) {
             state.value = action.payload
         },
         setMaxPrice(state, action: PayloadAction<string>) {
-            state.price.max = Number(action.payload)
-
-            state.itemsShow = state.items.filter((item) => {
-                if (state.price.min === null) {
-                    return item.price <= state.price.max && item.typeCare.includes(state.categoryFilter)
-                } else {
-                    return item.price <= state.price.max && item.price >= state.price.min && item.typeCare.includes(state.categoryFilter)
-                }
-            })
+            state.mainFilter.price.max = Number(action.payload)
+            mainFilter(state)
         },
         setMinPrice(state, action: PayloadAction<string>) {
-            state.price.min = Number(action.payload)
-
-            state.itemsShow = state.items.filter((item) => {
-                if (state.price.max === null) {
-                    return item.price >= state.price.min && item.typeCare.includes(state.categoryFilter)
-                } else {
-                    return item.price >= state.price.min && item.price <= state.price.max && item.typeCare.includes(state.categoryFilter)
-                }
-            })
+            state.mainFilter.price.min = Number(action.payload)
+            mainFilter(state)
         },
         setFilterSort(state, action: PayloadAction<sortAction>) {
             state.sortValue = action.payload
@@ -195,7 +113,7 @@ export const filterSlice = createSlice({
             state.id = action.payload
         },
         getPage(state, action) {
-            state.pageSize = action.payload
+            state.mainFilter.pageSize = action.payload
         }
     }
 })
@@ -212,12 +130,10 @@ export const {
     setMaxPrice,
     setMinPrice,
     setFilterSort,
-    initSort,
     getName,
     deleteCard,
     addItem,
     EditItem,
-    getItemId,
-    getPage
+    getItemId
 } = filterSlice.actions
 export default filterSlice.reducer

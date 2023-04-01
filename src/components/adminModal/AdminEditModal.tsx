@@ -14,7 +14,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
     const itemById = useSelector(selectCardById(id))
     const selectTypeCare = []
 
-    const [imageUrl, setImageUrl] = React.useState()
+    const [imageUrl, setImageUrl] = React.useState<string>('')
     const fileReader = new FileReader()
 
     fileReader.onloadend = () => {
@@ -28,7 +28,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
 
     const editItem = (event) => {
         const editItem = {
-            imageUrl: imageUrl,
+            imageUrl: imageUrl || itemById.imageUrl,
             name: event.target[0].value || itemById.name,
             type: event.target[3].value || itemById.type,
             size: +(event.target[4].value) || itemById.size,
@@ -37,7 +37,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
             brand: event.target[7].value || itemById.brand,
             description: event.target[1].value || itemById.description,
             price: +(event.target[5].value) || itemById.price,
-            typeCare: selectTypeCare,
+            typeCare: selectTypeCare || itemById.typeCare,
             id: id
         }
 
@@ -51,10 +51,10 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
 
     return (
         <>
-            {visibleEdit && <div onClick={() => setVisibleEdit(false)} className='modal'>
+            {visibleEdit && <div onClick={() => setVisibleEdit(false)} className='modal modal-admin'>
                 <form onSubmit={(event) => editItem(event)}
                       onClick={(event) => event.stopPropagation()}
-                      className='modal-content'>
+                      className='modal-content modal-content__admin'>
                     <h2>Поменяйте поля на нужные вам для редактиварония карточки</h2>
                     <label>
                         Название товара

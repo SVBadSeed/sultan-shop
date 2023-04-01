@@ -50,10 +50,10 @@ const AdminModal: React.FC<AdminModalProps> = ({visible, setVisible}) => {
 
     return (
         <>
-            {visible && <div onClick={() => setVisible(false)} className='modal'>
+            {visible && <div onClick={() => setVisible(false)} className='modal modal-admin'>
                 <form onSubmit={(event) => onSubmitHandler(event)}
                       onClick={(event) => event.stopPropagation()}
-                      className='modal-content'>
+                      className='modal-content modal-content__admin'>
                     <h2>Заполните поля чтобы создать карточку</h2>
                     <label>
                         Название товара

@@ -47,13 +47,13 @@ const CatalogParameters: React.FC = () => {
     const dispatch = useDispatch()
     const {value} = useSelector(selectFilter)
     let {items} = useSelector(selectFilter)
-    let {categoryFilter} = useSelector(selectFilter)
+    let {mainFilter} = useSelector(selectFilter)
 
     const [visible, setVisible] = React.useState(4)
 
     items.map((item) => {
         return producers.map((producer) => {
-            if (item.producer === producer.title && item.typeCare.includes(categoryFilter)) return producer.count++
+            if (item.producer === producer.title && item.typeCare.includes(mainFilter.categoryFilter)) return producer.count++
         })
     })
 

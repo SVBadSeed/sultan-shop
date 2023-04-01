@@ -1,16 +1,15 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux"
 import {selectFilter} from "../redux/filter/selectors"
+import {initItemsShow} from "../redux/filter/FilterSlice"
 
 import '../scss/components/_catalog.scss'
 
 import Sort from '../components/sort/Sort'
-
 import Categories from "../components/categories/Categories"
 import CatalogParameters from "../components/catalog/CatalogParameters"
 import CatalogCard from "../components/catalog/CatalogCard"
 import Pagination from "../components/pagination/Pagination"
-import {initItemsShow, initSort} from "../redux/filter/FilterSlice"
 import MobileCategory from "../components/mobileAdaptive/MobileCategory"
 
 const Catalog = () => {
@@ -19,9 +18,7 @@ const Catalog = () => {
 
     useEffect(() => {
         dispatch(initItemsShow())
-        dispatch(initSort())
     }, [])
-
 
     return (
         <div className='catalog'>

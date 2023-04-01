@@ -9,7 +9,7 @@ import {setCurrentPage} from "../../redux/filter/FilterSlice"
 
 const Pagination = () => {
     const dispatch = useDispatch()
-    const {pageSize} = useSelector(selectFilter)
+    const {mainFilter} = useSelector(selectFilter)
 
 
     const onChangePage = (page: number) => {
@@ -29,8 +29,8 @@ const Pagination = () => {
                       fill="#FFC85E"/>
             </svg>}
             onPageChange={(event) => onChangePage(event.selected + 1)}
-            pageRangeDisplayed={pageSize}
-            pageCount={2}/>
+            pageRangeDisplayed={mainFilter.pageSize}
+            pageCount={mainFilter.pageCount}/>
     )
 }
 
