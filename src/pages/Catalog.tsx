@@ -12,7 +12,7 @@ import CatalogCard from "../components/catalog/CatalogCard"
 import Pagination from "../components/pagination/Pagination"
 import MobileCategory from "../components/mobileAdaptive/MobileCategory"
 
-const Catalog = () => {
+const Catalog: React.FC = () => {
     const dispatch = useDispatch()
     const {itemsShow} = useSelector(selectFilter)
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../../scss/components/_mobileAdaptive.scss'
 
-const BackButton = () => {
+const BackButton: React.FC = () => {
     return (
         <div className='container'>
             <button className='back-button'>

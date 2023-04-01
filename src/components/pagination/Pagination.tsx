@@ -7,10 +7,9 @@ import {useDispatch, useSelector} from "react-redux"
 import {selectFilter} from "../../redux/filter/selectors"
 import {setCurrentPage} from "../../redux/filter/FilterSlice"
 
-const Pagination = () => {
+const Pagination: React.FC = () => {
     const dispatch = useDispatch()
     const {mainFilter} = useSelector(selectFilter)
-
 
     const onChangePage = (page: number) => {
         dispatch(setCurrentPage(page))

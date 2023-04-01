@@ -2,7 +2,7 @@ import React from 'react'
 
 import CatalogParameters from "../catalog/CatalogParameters"
 
-const MobileSearch = () => {
+const MobileSearch: React.FC = () => {
     return (
         <div className='mobile-search__block'>
             <div className='container'>

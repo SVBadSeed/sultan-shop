@@ -7,10 +7,10 @@ import {selectFilter} from "../redux/filter/selectors"
 
 import Header from "../components/header/Header"
 import Footer from "../components/footer/Footer"
-import MobileFooter from "../components/mobileAdaptive/MobileFooter";
-import BackButton from "../components/mobileAdaptive/BackButton";
+import MobileFooter from "../components/mobileAdaptive/MobileFooter"
+import BackButton from "../components/mobileAdaptive/BackButton"
 
-const MainLayout = () => {
+const MainLayout: React.FC = () => {
     const {name} = useSelector(selectFilter)
     const routes = [
         {

@@ -4,7 +4,7 @@ import ButtonPrice from '../../UI/ButtonPrice'
 import '../../scss/components/_footer.scss'
 import '../../scss/components/UI/_InputSearch.scss'
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <div className='footer'>
             <div className='container'>

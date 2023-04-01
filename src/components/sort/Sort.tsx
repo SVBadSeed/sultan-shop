@@ -5,25 +5,25 @@ import {useDispatch, useSelector} from "react-redux"
 import {setFilterSort} from "../../redux/filter/FilterSlice"
 import {selectFilter} from "../../redux/filter/selectors"
 
+const sortArr = [
+    {
+        title: 'Название(по возр.)',
+        sortProperty: 'title'
+    }, {
+        title: 'Название(по уб.)',
+        sortProperty: '-title'
+    }, {
+        title: 'Цена(по возр.)',
+        sortProperty: 'price'
+    }, {
+        title: 'Цена(по уб.)',
+        sortProperty: '-price'
+    },
+]
+
 const Sort: React.FC = () => {
     const dispatch = useDispatch()
     const {sortValue} = useSelector(selectFilter)
-
-    const sortArr = [
-        {
-            title: 'Название(по возр.)',
-            sortProperty: 'title'
-        }, {
-            title: 'Название(по уб.)',
-            sortProperty: '-title'
-        }, {
-            title: 'Цена(по возр.)',
-            sortProperty: 'price'
-        }, {
-            title: 'Цена(по уб.)',
-            sortProperty: '-price'
-        },
-    ]
 
     const sortRef = useRef<HTMLDivElement>(null)
     const [visible, setVisible] = React.useState(false)

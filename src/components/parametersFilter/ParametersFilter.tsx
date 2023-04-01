@@ -5,7 +5,7 @@ import {selectFilter} from "../../redux/filter/selectors"
 import '../../scss/components/_catalogParameters.scss'
 import {setCategoryId, setFilterCategories} from "../../redux/filter/FilterSlice"
 
-const ParametersFilter = () => {
+const ParametersFilter: React.FC = () => {
     const dispatch = useDispatch()
     const {categoryId} = useSelector(selectFilter)
 

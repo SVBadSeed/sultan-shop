@@ -6,7 +6,7 @@ type AdminModalProps = {
     visible: boolean,
     setVisible: any
 }
-const url = '/upload'
+
 const AdminModal: React.FC<AdminModalProps> = ({visible, setVisible}) => {
     const dispatch = useDispatch()
 
