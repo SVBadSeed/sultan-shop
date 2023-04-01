@@ -27,8 +27,7 @@ const AdminEditModal: React.FC<AdminModalProps> = ({visibleEdit, setVisibleEdit}
 
     const editItem = (event) => {
         const selected = [...event.target[9]].filter((option) => option.selected).map(option => option.value)
-
-
+        
         const editItem = {
             imageUrl: imageUrl || itemById.imageUrl,
             name: event.target[0].value || itemById.name,

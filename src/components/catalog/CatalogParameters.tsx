@@ -15,35 +15,35 @@ import {
     setMinPrice
 } from "../../redux/filter/FilterSlice"
 
-const producers = [
-    {
-        title: 'Grifon',
-        count: 0
-    }, {
-        title: 'Boyscout',
-        count: 0
-    }, {
-        title: 'Булгари грин',
-        count: 0
-    }, {
-        title: 'Paclan',
-        count: 0
-    }, {
-        title: 'Adidas',
-        count: 0
-    }, {
-        title: 'Нэфис',
-        count: 0
-    }, {
-        title: 'Camay',
-        count: 0
-    }, {
-        title: 'Nivea',
-        count: 0
-    }
-]
-
 const CatalogParameters: React.FC = () => {
+
+    const producers = [
+        {
+            title: 'Grifon',
+            count: 0
+        }, {
+            title: 'Boyscout',
+            count: 0
+        }, {
+            title: 'Булгари грин',
+            count: 0
+        }, {
+            title: 'Paclan',
+            count: 0
+        }, {
+            title: 'Adidas',
+            count: 0
+        }, {
+            title: 'Нэфис',
+            count: 0
+        }, {
+            title: 'Camay',
+            count: 0
+        }, {
+            title: 'Nivea',
+            count: 0
+        }
+    ]
 
     const dispatch = useDispatch()
     const {value} = useSelector(selectFilter)
