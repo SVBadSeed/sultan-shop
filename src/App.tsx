@@ -14,8 +14,8 @@ function App() {
     return (
         <div className='app'>
             <Routes>
-                <Route path='' element={<MainLayout/>}>
-                    <Route path='' element={<Catalog/>}/>
+                <Route path='/' element={<MainLayout/>}>
+                    <Route path='/' element={<Catalog/>}/>
                     <Route path='card/:barcode' element={<CardProduct/>}/>
                     <Route path='mobileSearch' element={<MobileSearch/>}/>
                     <Route path='cart' element={<Cart/>}/>
