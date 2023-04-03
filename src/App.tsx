@@ -6,8 +6,8 @@ import './scss/libs/normalize.scss'
 import Catalog from "./pages/Catalog"
 import MainLayout from "./layout/MainLayout"
 import Cart from "./pages/Cart"
-import CardProduct from "./components/cardProduct/CardProduct"
-import AdminPanel from "./components/adminPanel/AdminPanel"
+import CardProduct from "./pages/CardProduct"
+import AdminPanel from "./pages/AdminPanel"
 import MobileSearch from "./components/mobileAdaptive/MobileSearch"
 
 function App() {

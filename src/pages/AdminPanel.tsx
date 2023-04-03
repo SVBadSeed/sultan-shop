@@ -1,15 +1,15 @@
 import React from 'react'
 
-import '../../scss/components/_adminPanel.scss'
+import '../scss/components/_adminPanel.scss'
 
-import cards from "../../cards.json"
+import cards from "../cards.json"
 
 import {useDispatch, useSelector} from "react-redux"
-import {selectFilter} from "../../redux/filter/selectors"
-import AdminItem from "./AdminItem"
-import AdminModal from "../adminModal/AdminModal"
-import {initItems} from "../../redux/filter/FilterSlice"
-import AdminEditModal from "../adminModal/AdminEditModal"
+import {selectFilter} from "../redux/filter/selectors"
+import AdminItem from "../components/adminPanel/AdminItem"
+import AdminModal from "../components/adminModal/AdminModal"
+import {initItems} from "../redux/filter/FilterSlice"
+import AdminEditModal from "../components/adminModal/AdminEditModal"
 
 const AdminPanel: React.FC = () => {
     const dispatch = useDispatch()
