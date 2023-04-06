@@ -1,10 +1,8 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit"
-import cards from "../../cards.json"
-import {mainFilter} from "./selectors"
 import {FilterSliceState, item, sortAction} from "./types"
 
 const initialState: FilterSliceState = {
-    items: [...cards],
+    items: [],
     itemsShow: [],
     categoryId: null,
     value: '',
@@ -103,7 +101,6 @@ export const filterSlice = createSlice({
         },
         addItem(state, action: PayloadAction<item>) {
             state.items.unshift(action.payload)
-
         },
         EditItem(state, action: PayloadAction<item>) {
             const objIndex = state.items.findIndex((obj) => obj.id === state.id)
@@ -137,3 +134,47 @@ export const {
     getItemId
 } = filterSlice.actions
 export default filterSlice.reducer
+
+
+const mainFilter = (state: FilterSliceState) => {
+    state.itemsShow = state.items.filter(function (item) {
+            let availableConditions = []
+            if (state.mainFilter.categoryFilter) {
+                availableConditions.push("item.typeCare.includes(state.mainFilter.categoryFilter)")
+            }
+            if (state.mainFilter.producersFilter.length > 0) {
+                availableConditions.push("state.mainFilter.parametersFilter.includes(item.producer)")
+            }
+
+            let conditionStr = availableConditions.join("&&")
+            return eval(conditionStr)
+        }
+    )
+
+    if (state.mainFilter.price.max) {
+        state.itemsShow = state.itemsShow.filter((item) => {
+            if (state.mainFilter.price.min === null) {
+                return item.price <= state.mainFilter.price.max
+            } else {
+                return item.price <= state.mainFilter.price.max
+            }
+        })
+    }
+
+    if (state.mainFilter.price.min) {
+        state.itemsShow = state.itemsShow.filter((item) => {
+            if (state.mainFilter.price.max === null) {
+                return item.price >= state.mainFilter.price.min
+            } else {
+                return item.price >= state.mainFilter.price.min
+            }
+        })
+    }
+
+    state.mainFilter.firstPage = state.mainFilter.pageSize * (state.mainFilter.currentPage - 1)
+    state.mainFilter.secondPage = state.mainFilter.pageSize * state.mainFilter.currentPage
+
+    state.mainFilter.pageCount = Math.ceil(state.itemsShow.length / state.mainFilter.pageSize)
+
+    state.itemsShow = state.itemsShow.slice(state.mainFilter.firstPage, state.mainFilter.secondPage)
+}
