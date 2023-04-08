@@ -1,0 +1,659 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminItem AdminItem snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="admin-panel__item"
+      >
+        <div
+          class="admin-panel__content"
+        >
+          <div
+            class="admin-panel__content-image"
+          >
+            <span>
+              Картинка
+            </span>
+            <img
+              alt=""
+              src="https://sun9-19.userapi.com/impg/2PPRq_DqAos6wV6irSDxgUNzSCz-QaMLN2F30w/d9AlL4fl_eU.jpg?size=213x320&quality=95&sign=917a56004a0253a74d9f63bce0b055be&type=album"
+            />
+          </div>
+          <div
+            class="admin-panel__content-name"
+          >
+            <span>
+              Название
+            </span>
+            <p>
+               
+              ADIDAS
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-text"
+          >
+            <span>
+              Описание
+            </span>
+            <p>
+               
+              Купить Гель для душа 250 мл Adidas Уход за телом
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-size"
+          >
+            <span>
+              Размер
+            </span>
+            <p>
+               
+              250
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-type"
+          >
+            <span>
+              Тип
+            </span>
+            <p>
+               
+              мл
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-typeCare"
+          >
+            <span>
+              Тип ухода
+            </span>
+            <p>
+               
+              УХОД ЗА ТЕЛОМ
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-brand"
+          >
+            <span>
+              Бренд
+            </span>
+            <p>
+               
+              ADIDAS
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-producer"
+          >
+            <span>
+              Производитель
+            </span>
+            <p>
+               
+              Adidas
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-price"
+          >
+            <span>
+              Цена
+            </span>
+            <p>
+              48
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-barcode"
+          >
+            <span>
+              Штрихкод
+            </span>
+            <p>
+              4604049097549
+            </p>
+          </div>
+        </div>
+        <button
+          class="admin-panel__button-delete"
+        >
+          Удалить карточку
+        </button>
+        <button
+          class="admin-panel__button-edit"
+        >
+          Редактировать карточку
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="admin-panel__item"
+    >
+      <div
+        class="admin-panel__content"
+      >
+        <div
+          class="admin-panel__content-image"
+        >
+          <span>
+            Картинка
+          </span>
+          <img
+            alt=""
+            src="https://sun9-19.userapi.com/impg/2PPRq_DqAos6wV6irSDxgUNzSCz-QaMLN2F30w/d9AlL4fl_eU.jpg?size=213x320&quality=95&sign=917a56004a0253a74d9f63bce0b055be&type=album"
+          />
+        </div>
+        <div
+          class="admin-panel__content-name"
+        >
+          <span>
+            Название
+          </span>
+          <p>
+             
+            ADIDAS
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-text"
+        >
+          <span>
+            Описание
+          </span>
+          <p>
+             
+            Купить Гель для душа 250 мл Adidas Уход за телом
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-size"
+        >
+          <span>
+            Размер
+          </span>
+          <p>
+             
+            250
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-type"
+        >
+          <span>
+            Тип
+          </span>
+          <p>
+             
+            мл
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-typeCare"
+        >
+          <span>
+            Тип ухода
+          </span>
+          <p>
+             
+            УХОД ЗА ТЕЛОМ
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-brand"
+        >
+          <span>
+            Бренд
+          </span>
+          <p>
+             
+            ADIDAS
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-producer"
+        >
+          <span>
+            Производитель
+          </span>
+          <p>
+             
+            Adidas
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-price"
+        >
+          <span>
+            Цена
+          </span>
+          <p>
+            48
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-barcode"
+        >
+          <span>
+            Штрихкод
+          </span>
+          <p>
+            4604049097549
+          </p>
+        </div>
+      </div>
+      <button
+        class="admin-panel__button-delete"
+      >
+        Удалить карточку
+      </button>
+      <button
+        class="admin-panel__button-edit"
+      >
+        Редактировать карточку
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`CatalogParameters CatalogParameters snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="admin-panel__item"
+      >
+        <div
+          class="admin-panel__content"
+        >
+          <div
+            class="admin-panel__content-image"
+          >
+            <span>
+              Картинка
+            </span>
+            <img
+              alt=""
+              src="https://sun9-19.userapi.com/impg/2PPRq_DqAos6wV6irSDxgUNzSCz-QaMLN2F30w/d9AlL4fl_eU.jpg?size=213x320&quality=95&sign=917a56004a0253a74d9f63bce0b055be&type=album"
+            />
+          </div>
+          <div
+            class="admin-panel__content-name"
+          >
+            <span>
+              Название
+            </span>
+            <p>
+               
+              ADIDAS
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-text"
+          >
+            <span>
+              Описание
+            </span>
+            <p>
+               
+              Купить Гель для душа 250 мл Adidas Уход за телом
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-size"
+          >
+            <span>
+              Размер
+            </span>
+            <p>
+               
+              250
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-type"
+          >
+            <span>
+              Тип
+            </span>
+            <p>
+               
+              мл
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-typeCare"
+          >
+            <span>
+              Тип ухода
+            </span>
+            <p>
+               
+              УХОД ЗА ТЕЛОМ
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-brand"
+          >
+            <span>
+              Бренд
+            </span>
+            <p>
+               
+              ADIDAS
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-producer"
+          >
+            <span>
+              Производитель
+            </span>
+            <p>
+               
+              Adidas
+               
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-price"
+          >
+            <span>
+              Цена
+            </span>
+            <p>
+              48
+            </p>
+          </div>
+          <div
+            class="admin-panel__content-barcode"
+          >
+            <span>
+              Штрихкод
+            </span>
+            <p>
+              4604049097549
+            </p>
+          </div>
+        </div>
+        <button
+          class="admin-panel__button-delete"
+        >
+          Удалить карточку
+        </button>
+        <button
+          class="admin-panel__button-edit"
+        >
+          Редактировать карточку
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="admin-panel__item"
+    >
+      <div
+        class="admin-panel__content"
+      >
+        <div
+          class="admin-panel__content-image"
+        >
+          <span>
+            Картинка
+          </span>
+          <img
+            alt=""
+            src="https://sun9-19.userapi.com/impg/2PPRq_DqAos6wV6irSDxgUNzSCz-QaMLN2F30w/d9AlL4fl_eU.jpg?size=213x320&quality=95&sign=917a56004a0253a74d9f63bce0b055be&type=album"
+          />
+        </div>
+        <div
+          class="admin-panel__content-name"
+        >
+          <span>
+            Название
+          </span>
+          <p>
+             
+            ADIDAS
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-text"
+        >
+          <span>
+            Описание
+          </span>
+          <p>
+             
+            Купить Гель для душа 250 мл Adidas Уход за телом
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-size"
+        >
+          <span>
+            Размер
+          </span>
+          <p>
+             
+            250
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-type"
+        >
+          <span>
+            Тип
+          </span>
+          <p>
+             
+            мл
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-typeCare"
+        >
+          <span>
+            Тип ухода
+          </span>
+          <p>
+             
+            УХОД ЗА ТЕЛОМ
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-brand"
+        >
+          <span>
+            Бренд
+          </span>
+          <p>
+             
+            ADIDAS
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-producer"
+        >
+          <span>
+            Производитель
+          </span>
+          <p>
+             
+            Adidas
+             
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-price"
+        >
+          <span>
+            Цена
+          </span>
+          <p>
+            48
+          </p>
+        </div>
+        <div
+          class="admin-panel__content-barcode"
+        >
+          <span>
+            Штрихкод
+          </span>
+          <p>
+            4604049097549
+          </p>
+        </div>
+      </div>
+      <button
+        class="admin-panel__button-delete"
+      >
+        Удалить карточку
+      </button>
+      <button
+        class="admin-panel__button-edit"
+      >
+        Редактировать карточку
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

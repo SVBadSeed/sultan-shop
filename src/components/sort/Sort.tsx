@@ -24,7 +24,6 @@ const sortArr = [
 const Sort: React.FC = () => {
     const dispatch = useDispatch()
     const {sortValue} = useSelector(selectFilter)
-
     const sortRef = useRef<HTMLDivElement>(null)
     const [visible, setVisible] = React.useState(false)
 
