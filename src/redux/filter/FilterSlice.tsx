@@ -143,7 +143,7 @@ const mainFilter = (state: FilterSliceState) => {
                 availableConditions.push("item.typeCare.includes(state.mainFilter.categoryFilter)")
             }
             if (state.mainFilter.producersFilter.length > 0) {
-                availableConditions.push("state.mainFilter.parametersFilter.includes(item.producer)")
+                availableConditions.push("state.mainFilter.producersFilter.includes(item.producer)")
             }
 
             let conditionStr = availableConditions.join("&&")
